@@ -89,19 +89,15 @@ Esto habilitará la opción de hacer pull & request de tus cambios.
 
 Es muy importante, que actualices periódicamente tu repositorio local, para que si algun miembro del equipo hizo cambios, se vean reflejados en tu copia local y se mantenga actualizado tu repositorio. 
 
-Por ejemplo cada día, o cada vez que vuelvas a trabajar en el proyecto, para actualizar ejecuta lo siguiente:
+Por ejemplo cada día, o cada vez que vuelvas a trabajar en el proyecto, para actualizar ejecuta (copia y pega) lo siguiente:
 
 
 ```console
-# Actualizar la rama "develop"
-git checkout develop
-git fetch upstream
-git merge upstream/main
-git push origin develop
-
-# Actualizar la rama "main"
+# Actualizar la rama "main" y "develop" desde el repo principal
 git checkout main
 git fetch upstream
 git merge upstream/main
 git push origin main
+git checkout develop
+git pull origin main
 ```
