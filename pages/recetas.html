@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-    
+
 <!--===========HEAD=============-->
+
 <head>
     <!---------- metas ---------->
     <meta charset="UTF-8">
@@ -9,19 +10,28 @@
     <meta name="description" content="Descripción de la página bebidrink">
     <meta name="keywords" content="palabras clave separadas por coma">
     <meta name="author" content="autores separados por comas">
-    
+
     <!---------- Favicon ---------->
     <link rel="shortcut icon" type="image/png" href="ruta/imagen.png">
+
     <!---------- links ---------->
-    <link rel="stylesheet" href="./css/style.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spinkit/2.0.1/spinkit.min.css"
+        integrity="sha512-kRYkjiYH/VXxoiaDK2oGNMKIi8VQVfie1lkYGX3kmfzWNR2kfaF5ze0885W3/eE6lIiURBsZA91M/WNvCajHMw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/animations.css">
+
     <!---------- CDN'S -------->
-    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
     <!---------- title ---------->
     <title>Document</title>
 </head>
-    
+
 <!--===========BODY=============-->
+
 <body>
     <!---------- Navigation ---------->
     <nav class="">
@@ -38,28 +48,46 @@
             </ul>
         </div>
     </nav>
-    
+
     <!---------- Header section ---------->
     <header class="">
-        <h1>PRODUCTOS</h1>
+        <h1>RECETA TRAGOS</h1>
+        <div class="center">
+            <h6 class="letters">BUSQUEDA</h6>
+            <input type="text" id="consulta" />
+            <button id="buscar">buscar</button>
+        </div>
     </header>
-    
+
     <!---------- Main content ---------->
     <main class="">
+        <section id="coincidencias" class=""></section>
+
         <section class="">
-            <article class="">
-            <article>
+            <!-- Spinner/loader -->
+            <div class="spinner" id="spinner">
+                <div class="cube1"></div>
+                <div class="cube2"></div>
+            </div>
+            <article id="resultado">
+                <!-- AQUI SE INSERTA LA TARJETA DE LA RECETA BUSCADA 
+            JUNTO CON SU IMAGEN RESPECTIVA -->
+                <h2 class="">
+                    BUSCÁ TU TRAGO
+                </h2>
+                <article>
         </section>
+
     </main>
-    
+
     <!---------- title ---------->
     <footer class="">
     </footer>
 
     <!--===========SCRIPTS=============-->
     <script src="" type="text/javascript"></script>
-    <script src="" type="text/javascript"></script>
-    <script src="" type="text/javascript"></script>
+    <script src="../js/animations.js" type="text/javascript"></script>
+    <script src="../js/apiRecetas.js" type="text/javascript"></script>
 </body>
-        
+
 </html>
