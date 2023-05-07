@@ -1,0 +1,230 @@
+/* ==========================================
+****************** IMPORTS *****************
+=============================================*/
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto+Flex:wght@200;400;700&display=swap');
+/* Reseteo de propiedades del Document */
+@import url("./normalize.css"); 
+
+/* ==========================================
+******************VARIABLES *****************
+=============================================*/
+:root {
+    /* Fuentes */
+    --fuente-prin: 'Lora', serif;
+    --fuente--sec: 'Josefin Sans', sans-serif;
+    --fuente--ter: 'Roboto Flex', sans-serif;
+}
+
+/* ==========================================
+****************** ETIQUETAS *****************
+=============================================*/
+*{
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuente-prin);
+}
+
+p, h5, h6, li{
+    font-family: var(--fuente--sec);
+}
+
+a, button {
+    font-family: var(--fuente--ter);
+}
+
+
+/* ==========================================
+****************** SELECTORES *****************
+=============================================*/
+.box, .nav-box {
+    padding: 0 10%;
+    box-shadow: 0 0 0 1px black;
+}
+
+.trago-img {
+    max-width: 90%;
+}
+
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.ingredients {
+
+}
+
+.ingredient {
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.no-encontrado {
+    width: 50%;
+}
+
+
+
+/* ==========================================
+************Estilos del modal*************** 
+============================================*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(79, 37, 13, 0.848);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #fefefe89;
+    margin: auto;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 100px 1px rgba(0, 0, 0, 0.375);
+    width: 70%;
+    max-width: 400px;
+}
+
+.modal--title {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.modal--input {
+    width: 100%;
+    height: 35px;
+    border: none;
+    background-color: rgb(235, 217, 184);
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.modal--button {
+    width: 100%;
+    padding: 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(3, 2, 0);
+    color: white;
+    margin-top: 5px;
+}
+
+.modal--button:hover {
+    background-color: rgba(0, 0, 0, 0.561);
+    cursor: pointer;
+}
+
+
+.alerta-m-container {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.557);
+}
+
+.alerta-m-image {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/playa.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 150%;
+    text-align: center;
+}
+
+
+/* ==========================================
+***************** MEDIAQUERIES****************
+=============================================*/

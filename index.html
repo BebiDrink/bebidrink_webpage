@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-    
+
 <!--===========HEAD=============-->
+
 <head>
     <!---------- metas ---------->
     <meta charset="UTF-8">
@@ -9,24 +10,25 @@
     <meta name="description" content="Descripción de la página bebidrink">
     <meta name="keywords" content="palabras clave separadas por coma">
     <meta name="author" content="autores separados por comas">
-    
+
     <!---------- Favicon ---------->
-    <link rel="shortcut icon" type="image/png" href="ruta/imagen.png">
+    <link rel="shortcut icon" type="image/png" href="./images/faviconrecipes.png">
     <!---------- links ---------->
     <link rel="stylesheet" href="./css/style.css">
-    
+
     <!---------- CDN'S -------->
-    
+
     <!---------- title ---------->
-    <title>Document</title>
+    <title>BebiDrink Home</title>
 </head>
-    
+
 <!--===========BODY=============-->
+
 <body>
     <!---------- Navigation ---------->
     <nav class="">
         <div class="nav-item">
-            <img class="item_logo" src="./images/logo.png" alt="">
+            <img class="item_logo" src="" alt="">
             🍹LOGO
         </div>
         <div class="nav-item">
@@ -38,28 +40,40 @@
             </ul>
         </div>
     </nav>
-    
+
     <!---------- Header section ---------->
     <header class="">
         <h1>INICIO</h1>
     </header>
-    
+
     <!---------- Main content ---------->
     <main class="">
         <section class="">
             <article class="">
-            <article>
+                <article>
         </section>
     </main>
-    
+
     <!---------- title ---------->
     <footer class="">
     </footer>
 
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <form class="modal-content">
+            <label for="fechaNacimiento" class="modal--title">Ingresa tu fecha de nacimiento:</label>
+            <input class="modal--input" type="date" id="fechaNacimiento" name="fechaNacimiento" min="1900-01-01"
+                max="2023-12-31" required>
+            <button class="modal--button" id="ingresar" type="submit">Enviar</button>
+        </form>
+
+    </div>
+
+
     <!--===========SCRIPTS=============-->
+    <script src="./js/modal.js" type="text/javascript"></script>
     <script src="" type="text/javascript"></script>
-    <script src="" type="text/javascript"></script>
-    <script src="" type="text/javascript"></script>
+
 </body>
-    
+
 </html>

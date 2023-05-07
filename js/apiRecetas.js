@@ -8,7 +8,7 @@ const botonBusqueda = document.querySelector("#buscar"); //boton
 const inputBusqueda = document.querySelector("#consulta"); //input
 const resultado = document.querySelector("#resultado"); //Contenedor para resultados
 const coincidencias = document.querySelector("#coincidencias"); // contenedor para filtros por coincidencia
-const simbol = `${'VucW8STKya'}/${'CqemKDvZAGw'}==${'3PxF2QwPy0Lx4Hpd'}`; // Api Key
+const simbol = `${'VucW8STKya'}/${'CqemKDvZAGw'}==${'3PxF2QwPy0Lx4Hpd'}`; // Api
 
 /****** CARGANDO EVENTOS DEL DOCUMENTO ******/
 window.addEventListener("load", agregarEventos);
@@ -17,6 +17,8 @@ window.addEventListener("load", agregarEventos);
 /*** BUSCAR Y MOSTRAR EN EL DOCUMENTO LA INFO DEL TRAGO ***/
 function buscarTrago() {
     const busqueda = inputBusqueda.value;
+    coincidencias.innerHTML = "";
+    resultado.innerHTML = "";
     // Consumiendo API
     opcionesApi(busqueda, simbol)
         .then((resultadosTragos) => {
@@ -59,14 +61,13 @@ function opcionesApi(tragoBuscado, key) {
                 })
                 .catch((error) => {
                     console.log("ERROR: no se pudieron cargar los datos");
-                    coincidencias.innerHTML = `<h2> ¿En realidad ${tragoBuscado} existe?... </h2>`;
+                    NoEncontrado(tragoBuscado)
                     cargando("off")
                 });
         })
         .catch((error) => {
             console.log("ERROR: no se pudo leer la imagen");
-            coincidencias.innerHTML = `<h2>Lo sentimos, ${tragoBuscado} no fue encontrado en la API </h2>`;
-            cargando("off")
+            NoEncontrado(tragoBuscado)
         });
 }
 
@@ -90,6 +91,7 @@ function obtenerSeleccionado(tragoBuscado, key) {
             return axios
                 .get(apiNinjas, { headers: { "X-Api-Key": ninKey } })
                 .then((response) => {
+
                     const ingredientesTrago = response.data[0].ingredients;
                     const instruccionesTrago = response.data[0].instructions;
 
@@ -98,23 +100,20 @@ function obtenerSeleccionado(tragoBuscado, key) {
                     const ingredientes = ingredientesTrago;
                     const instrucciones = instruccionesTrago;
 
-
                     enviarResultado(nombre, imagen, ingredientes, instrucciones, resultado);
                 })
 
                 .catch((error) => {
                     console.log(error, "ERROR: no se pudieron cargar los datos");
-                    coincidencias.innerHTML = `<h2>Lo sentimos ${tragoBuscado} no fue encontrado en la API </h2>`;
+                    NoEncontrado(tragoBuscado)
                     /* resultado.innerHTML = videoSugerencia(); */
-                    cargando("off");
                 });
         })
 
         .catch((error) => {
             console.log(error, "ERROR: no se pudo leer la imagen");
-            coincidencias.innerHTML = `<h2>Lo sentimos ${tragoBuscado} no fue encontrado en la API </h2>`;
+            NoEncontrado(tragoBuscado)
             /* resultado.innerHTML = videoSugerencia(); */
-            cargando("off");
         });
 }
 
@@ -123,6 +122,7 @@ function obtenerSeleccionado(tragoBuscado, key) {
 existe, inserta botones dinámicos con las opciones devueltas.*/
 let tragoSeleccionado = ""
 function mostrarOpciones(objetoTragos, tragoBuscado) {
+
 
     cargando("on")
 
@@ -148,6 +148,8 @@ function mostrarOpciones(objetoTragos, tragoBuscado) {
         </h3>
     `;
 
+        resultado.innerHTML ="";
+
         // agregar el elemento div al contenedor
         coincidencias.appendChild(opcionesDiv);
 
@@ -163,31 +165,30 @@ function mostrarOpciones(objetoTragos, tragoBuscado) {
         });
         
     }else {
-        coincidencias.innerHTML = `<h2>Lo sentimos ${tragoBuscado} no fue encontrado en la API </h2>`;
-        cargando("off")
+        NoEncontrado(tragoBuscado)
     };
 }
 
 /* ====================================================================== */
-/*  INSERTA RECETA E IMAGEN DEL TRAGO EN EL DOCUMENTO */
+/*  INSERTAR RECETA E IMAGEN DEL TRAGO EN EL DOCUMENTO */
 function enviarResultado(nombre, imagen, ingredientes, instrucciones, destino) {
     cargando("off");
     destino.innerHTML = `
-      <div class='grid'>
+      <div class=''>
 
         <!-- TITULOS -->
-        <h2 class="txt-center col titulo-bebida">${nombre.toUpperCase()}</h2>
-        <img src=${imagen} class="center col">
+        <h2 class="">${nombre.toUpperCase()}</h2>
+        <img src=${imagen} class="trago-img">
 
         <!-- INGREDIENTES -->    
-        <div class='col container'>
+        <div class='ingredients'>
         <h3>INGREDIENTS</h3>
             ${listaIngredientes(ingredientes)}
         </div>
 
         <!-- INSTRUCCIONES -->    
-        <div class='col container'>
-        <h3>INSTRUCTIONS</h3>
+        <div class='instructions'>
+            <h3>INSTRUCTIONS</h3>
             <p>${instrucciones}</p>
         </div>
 
@@ -199,7 +200,7 @@ function enviarResultado(nombre, imagen, ingredientes, instrucciones, destino) {
 /* ORDENAR INGREDIENTES EN FORMATO LISTA UL */
 function listaIngredientes(listaCruda) {
     const ingredientes = listaCruda.map(
-        (ingrediente) => `<li>- ${ingrediente}</li>`
+        (ingrediente) => `<li class='ingredient'>${ingrediente}</li>`
     );
     const listaFormateada = `<ul>${ingredientes.join("")}</ul>`;
     return listaFormateada;
@@ -268,6 +269,28 @@ function videoSugerencia() {
     </div>
     `;
 }
+
+
+function NoEncontrado(tragoBuscado){
+    cargando("off")
+    coincidencias.innerHTML = "";
+    resultado.innerHTML = `
+        <div class=''>
+            <h2>Lo sentimos, ${tragoBuscado} no fue encontrado en la API </h2>
+            <img class="no-encontrado" src="../images/copaVacia.jpg">
+        </div>
+    `;
+
+    
+}
+
+
+
+
+
+
+
+
 
 /* ====================================================================== */
 function agregarEventos() {
