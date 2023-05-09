@@ -174,20 +174,20 @@ function mostrarOpciones(objetoTragos, tragoBuscado) {
 function enviarResultado(nombre, imagen, ingredientes, instrucciones, destino) {
     cargando("off");
     destino.innerHTML = `
-      <div class=''>
+      <div class='container flexcol center-center card'>
 
         <!-- TITULOS -->
-        <h2 class="">${nombre.toUpperCase()}</h2>
+        <h2 class="trago-titulo">${nombre.toUpperCase()}</h2>
         <img src=${imagen} class="trago-img">
 
         <!-- INGREDIENTES -->    
-        <div class='ingredients'>
+        <div class='ingredientes'>
         <h3>INGREDIENTS</h3>
             ${listaIngredientes(ingredientes)}
         </div>
 
         <!-- INSTRUCCIONES -->    
-        <div class='instructions'>
+        <div class='instrucciones'>
             <h3>INSTRUCTIONS</h3>
             <p>${instrucciones}</p>
         </div>
@@ -200,9 +200,9 @@ function enviarResultado(nombre, imagen, ingredientes, instrucciones, destino) {
 /* ORDENAR INGREDIENTES EN FORMATO LISTA UL */
 function listaIngredientes(listaCruda) {
     const ingredientes = listaCruda.map(
-        (ingrediente) => `<li class='ingredient'>${ingrediente}</li>`
+        (ingrediente) => `<li class=''>${ingrediente}</li>`
     );
-    const listaFormateada = `<ul>${ingredientes.join("")}</ul>`;
+    const listaFormateada = `<ul class=''>${ingredientes.join("")}</ul>`;
     return listaFormateada;
 }
 

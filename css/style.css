@@ -2,148 +2,440 @@
 ****************** IMPORTS *****************
 =============================================*/
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto+Flex:wght@200;400;700&display=swap');
-/* Reseteo de propiedades del Document */
-@import url("./normalize.css"); 
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto+Flex:wght@200;400;700&display=swap");
+/* Normalizador moderno del document para todos los navegadores */
+@import url("./normalize.css");
 
 /* ==========================================
 ******************VARIABLES *****************
 =============================================*/
 :root {
     /* Fuentes */
-    --fuente-prin: 'Lora', serif;
-    --fuente--sec: 'Josefin Sans', sans-serif;
-    --fuente--ter: 'Roboto Flex', sans-serif;
+    --fuente-prin: "Lora", serif;
+    --fuente-sec: "Josefin Sans", sans-serif;
+    --fuente-ter: "Roboto Flex", sans-serif;
+    /* Colores*/
+    --fondo: whitesmoke;
+    --color-prin: purple;
+    --color-sec: lightgray;
+    --color-ter: violet; 
+    --color-acnt: tomato;
+
 }
 
 /* ==========================================
-****************** ETIQUETAS *****************
+*************** DOCUMENT TAGS ***************
 =============================================*/
-*{
+* {
     text-decoration: none;
+    color: black
 }
 
-ul, ol {
+ul,
+ol {
     list-style: none;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4,
+input {
     font-family: var(--fuente-prin);
 }
 
-p, h5, h6, li{
-    font-family: var(--fuente--sec);
+p,
+h5,
+h6,
+li {
+    font-family: var(--fuente-sec);
 }
 
-a, button {
-    font-family: var(--fuente--ter);
+a,
+button {
+    font-family: var(--fuente-ter);
+    margin: 0.5%;
 }
 
+.nav-item-links li {
+    margin: 0 5px;
+
+}
 
 /* ==========================================
-****************** SELECTORES *****************
+**************** CONTENEDORES ***************
 =============================================*/
-.box, .nav-box {
+
+/* CONTENEDORES */
+.container,
+.nav-container {
+    transition: all linear 1s;
+    max-width: 100%;
     padding: 0 10%;
-    box-shadow: 0 0 0 1px black;
 }
 
-.trago-img {
-    max-width: 90%;
+.nav-container {
+    background-color: var(--color-sec);
+    min-height: 70px;
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.664);
 }
 
+/* card */
+.card {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.642);
+    width: 80%;
+    height: 90%;
+}
 
+/* ==========================================
+****************** FLEXBOX *****************
+=============================================*/
 .flex {
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
     justify-content: center;
 }
 
-
-.ingredients {
-
+/* row nowrap */
+.flexrow {
+    flex-wrap: nowrap;
 }
 
-.ingredient {
-    text-align: left;
+/* row wrap */
+.flexrow-wrap {
+    flex-wrap: wrap;
+}
+
+/* row wrap-reverse */
+.flexrow-wreverse {
+    flex-wrap: wrap-reverse;
+}
+
+/* column nowrap */
+.flexcol {
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+/* column wrap */
+.flexcol-wrap {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* column wrap-reverse */
+.flexcol-wreverse {
+    flex-direction: column-reverse;
+    flex-wrap: wrap-reverse;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.no-encontrado {
-    width: 50%;
+/* ==========================================
+******************** GRID *******************
+=============================================*/
+/* Para el contenedor padre */
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px !important;
+    margin: 0px 0 !important;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+/* Para inicializar los contenedores hijos*/
+.col {
+    grid-column: span 12 / span 12;
+    padding: 10px;
+}
+
+/* Columnas base fijas (Si no se desea especificar dispositivo)*/
+.col-1 {
+    grid-column: span 1 / span 1;
+}
+
+.col-2 {
+    grid-column: span 2 / span 2;
+}
+
+.col-3 {
+    grid-column: span 3 / span 3;
+}
+
+.col-4 {
+    grid-column: span 4 / span 4;
+}
+
+.col-5 {
+    grid-column: span 5 / span 5;
+}
+
+.col-6 {
+    grid-column: span 6 / span 6;
+}
+
+.col-7 {
+    grid-column: span 7 / span 7;
+}
+
+.col-8 {
+    grid-column: span 8 / span 8;
+}
+
+.col-9 {
+    grid-column: span 9 / span 9;
+}
+
+.col-10 {
+    grid-column: span 10 / span 10;
+}
+
+.col-11 {
+    grid-column: span 11 / span 11;
+}
+
+.col-12 {
+    grid-column: span 12 / span 12;
+}
+
+/* TAMAÑOS GRID COLUMNS RESPONSIVE (COLUMNAS PARA ABARCAR) */
+/* Dispositivos de hasta de 600px (mobiles y tablets) */
+@media only screen and (max-width: 600px) {
+    .s-1 {
+        grid-column: span 1 / span 1;
+    }
+
+    .s-2 {
+        grid-column: span 2 / span 2;
+    }
+
+    .s-3 {
+        grid-column: span 3 / span 3;
+    }
+
+    .s-4 {
+        grid-column: span 4 / span 4;
+    }
+
+    .s-5 {
+        grid-column: span 5 / span 5;
+    }
+
+    .s-6 {
+        grid-column: span 6 / span 6;
+    }
+
+    .s-7 {
+        grid-column: span 7 / span 7;
+    }
+
+    .s-8 {
+        grid-column: span 8 / span 8;
+    }
+
+    .s-9 {
+        grid-column: span 9 / span 9;
+    }
+
+    .s-10 {
+        grid-column: span 10 / span 10;
+    }
+
+    .s-11 {
+        grid-column: span 11 / span 11;
+    }
+
+    .s-12 {
+        grid-column: span 12 / span 12;
+    }
+}
+
+/* Dispositivos de mas de 600px (Tablets y otros) */
+@media only screen and (min-width: 600px) {
+    .m-1 {
+        grid-column: span 1 / span 1;
+    }
+
+    .m-2 {
+        grid-column: span 2 / span 2;
+    }
+
+    .m-3 {
+        grid-column: span 3 / span 3;
+    }
+
+    .m-4 {
+        grid-column: span 4 / span 4;
+    }
+
+    .m-5 {
+        grid-column: span 5 / span 5;
+    }
+
+    .m-6 {
+        grid-column: span 6 / span 6;
+    }
+
+    .m-7 {
+        grid-column: span 7 / span 7;
+    }
+
+    .m-8 {
+        grid-column: span 8 / span 8;
+    }
+
+    .m-9 {
+        grid-column: span 9 / span 9;
+    }
+
+    .m-10 {
+        grid-column: span 10 / span 10;
+    }
+
+    .m-11 {
+        grid-column: span 11 / span 11;
+    }
+
+    .m-12 {
+        grid-column: span 12 / span 12;
+    }
+}
+
+/* Dispositivos de mas de 900px (Desktops y +) */
+@media only screen and (min-width: 900px) {
+    .l-1 {
+        grid-column: span 1 / span 1;
+    }
+
+    .l-2 {
+        grid-column: span 2 / span 2;
+    }
+
+    .l-3 {
+        grid-column: span 3 / span 3;
+    }
+
+    .l-4 {
+        grid-column: span 4 / span 4;
+    }
+
+    .l-5 {
+        grid-column: span 5 / span 5;
+    }
+
+    .l-6 {
+        grid-column: span 6 / span 6;
+    }
+
+    .l-7 {
+        grid-column: span 7 / span 7;
+    }
+
+    .l-8 {
+        grid-column: span 8 / span 8;
+    }
+
+    .l-9 {
+        grid-column: span 9 / span 9;
+    }
+
+    .l-10 {
+        grid-column: span 10 / span 10;
+    }
+
+    .l-11 {
+        grid-column: span 11 / span 11;
+    }
+
+    .l-12 {
+        grid-column: span 12 / span 12;
+    }
 }
 
 
 
 /* ==========================================
-************Estilos del modal*************** 
-============================================*/
+****************** POSICIÓN *****************
+=============================================*/
+/* ELEMENTOS CENTRADOS*/
+.center {
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* elementos y texto contenido en ellos centrados*/
+.center-center {
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+}
+
+/*  ALINEACIONES DE TEXTO */
+.txt-center {
+    text-align: center;
+}
+
+.txt-left {
+    text-align: left;
+}
+
+.txt-right {
+    text-align: right;
+}
+
+.txt-justify {
+    text-align: justify;
+}
+
+
+/*===================================================
+****************** BOTONES ************************
+===================================================*/
+.btn {
+    width: auto;
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #000000;
+    color: white;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 2px -1px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover,
+.btn:focus {
+    /* background-color: #2bbbad; */
+    color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+        0 2px 1px -1px rgba(0, 0, 0, 0.12);
+    background-color: #6a0707;
+}
+
+.btn:active {
+    /* background-color: #fc0000; */
+    color: #8a0000;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 3px -2px rgba(0, 0, 0, 0.14),
+        0 1px 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+
+/*===================================================
+**************************************************
+******************* INDEX ************************
+***************************************************
+===================================================*/
+/* MODAL VALIDACIÓN DE MAYORÍA DE EDAD */
 .modal {
     display: none;
     position: fixed;
@@ -203,7 +495,6 @@ a, button {
     cursor: pointer;
 }
 
-
 .alerta-m-container {
     width: 80%;
     background-color: rgba(0, 0, 0, 0.557);
@@ -225,45 +516,85 @@ a, button {
 }
 
 
-/* ==========================================
-***************** MEDIAQUERIES****************
-=============================================*/
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.productos {   
+/*===================================================
+****************************************************
+******************* PRODUCTOS **********************
+****************************************************
+===================================================*/
+/* ex .productos ==> .img-productos*/
+.img-productos {
     padding: 5%;
-    margin:5%;
+    margin: 5%;
     width: 80%;
-    height: 80%;}
+    height: 80%;
+}
 
-.divProductos{ 
+/****
+.img-productos {
+    object-fit: cover; <==Este acomoda la imagen al contenedor
+    width: 100px; 
+    height: 180px;
+} 
+****/
+
+.divProductos {
     padding: 5%;
-    margin:5%;
-border:transparent;
-border-color: grey;
-box-shadow: 0px 0px 30px grey;
-border-radius: 10%;
-width: 100%;
-height: 100%;
+    margin: 5%;
+    border: transparent;
+    border-color: grey;
+    box-shadow: 0px 0px 30px grey;
+    border-radius: 10%;
+    width: 100%;
+    height: 100%;
 }
 
 .divProductos:hover {
     box-shadow: 0px 0px 30px gold;
-  }
+}
 
-.container{
+/* ex .container ==> #productos: container generaba conflictos, ya que 
+el script iba a insertar imágenes en cualquier etiqueta
+con la clase container*/
+#productos {
     display: grid;
-    gap:30px;
+    gap: 30px;
     text-align: center;
     padding: 10%;
-    grid-template-columns:2fr 2fr 2fr 2fr;
-    grid-template-rows:2fr 2fr 2fr;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr;
     width: 900px;
     height: 900px;
-
-
 }
+
+
+/*===================================================
+****************************************************
+**************** RECETAS TRAGOS ********************
+****************************************************
+===================================================*/
+
+.ingredientes h3,
+.instrucciones h3 {
+    text-align: center;
+}
+
+.trago-img {
+    max-width: 90%;
+}
+
+.no-encontrado {
+    width: 50%;
+}
+
+/*===================================================
+****************************************************
+**************** FORMULARIO ********************
+****************************************************
+===================================================*/
+
+/*===================================================
+****************************************************
+**************** VALIDACIÓN ********************
+****************************************************
+===================================================*/

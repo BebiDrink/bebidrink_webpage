@@ -36,13 +36,14 @@
 
 <body>
     <!---------- Navigation ---------->
-    <nav class="nav-box">
+    <nav class="nav-container flex flexrow center-center">
+        <!-- logo -->
         <div class="nav-item">
-            <img class="item_logo" src="./images/logo.png" alt="">
-            🍹LOGO
+            <img class="item_logo" src="../images/faviconrecipes.png" alt="">
         </div>
+        <!-- links -->
         <div class="nav-item">
-            <ul class="nav-item-links">
+            <ul class="nav-item-links flex">
                 <li class="" id="item-link"><a href="../index.html">Inicio</a></li>
                 <li class="" id="item-link"><a href="./productos.html">Productos</a></li>
                 <li class="" id="item-link"><a href="./recetas.html">Recetas</a></li>
@@ -52,25 +53,27 @@
     </nav>
 
     <!---------- Header section ---------->
-    <header class="box flex">
+    <header class="container center-center">
         <h1>RECETA TRAGOS</h1>
         <div class="center">
             <h6 class="letters">BUSQUEDA</h6>
             <input type="text" id="consulta" />
-            <button id="buscar">buscar</button>
+            <button id="buscar" class="btn">buscar</button>
         </div>
     </header>
 
     <!---------- Main content ---------->
-    <main class="box flex">
-        <section id="coincidencias" class=""></section>
+    <main class="container flexcol center-center">
+        <section id="coincidencias" class="center"></section>
 
-        <section class="">
+        <section class="center">
+            
             <!-- Spinner/loader -->
             <div class="spinner" id="spinner">
                 <div class="cube1"></div>
                 <div class="cube2"></div>
             </div>
+
             <article id="resultado">
                 <!-- AQUI SE INSERTA LA TARJETA DE LA RECETA BUSCADA 
             JUNTO CON SU IMAGEN RESPECTIVA -->
