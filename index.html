@@ -14,9 +14,12 @@
     <!---------- Favicon ---------->
     <link rel="shortcut icon" type="image/png" href="./images/faviconrecipes.png">
     <!---------- links ---------->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/personalized.css"><!-- estilos universales para el proyecto -->
+    <link rel="stylesheet" href="./css/style.css"><!-- estilos de cada página -->
 
     <!---------- CDN'S -------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script><!-- vanta.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script><!-- vanta.js -->
 
     <!---------- title ---------->
     <title>BebiDrink Home</title>
@@ -24,27 +27,30 @@
 
 <!--===========BODY=============-->
 
-<body>
+<body class="body">
     <!---------- Navigation ---------->
-    <nav class="nav-container flex flexrow center-center">
+    <nav class="nav">
         <!-- logo -->
-        <div class="nav-item">
-            <img class="item_logo" src="./images/faviconrecipes.png" alt="">
+        <div class="nav-logo">
+            <img class="logo" src="../images/faviconrecipes.png" alt="">
         </div>
         <!-- links -->
-        <div class="nav-item">
-            <ul class="nav-item-links flex">
-                <li class="" id="item-link"><a href="./index.html">Inicio</a></li>
-                <li class="" id="item-link"><a href="./pages/productos.html">Productos</a></li>
-                <li class="" id="item-link"><a href="./pages/recetas.html">Recetas</a></li>
-                <li class="" id="item-link"><a href="./pages/contacto.html">Contacto</a></li>
+        <div class="nav-links">
+            <ul class="links flex">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./pages/productos.html">Productos</a></li>
+                <li><a href="./pages/recetas.html">Recetas</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
     <!---------- Header section ---------->
-    <header class="container center">
-        <h1>INICIO</h1>
+    <header id="header" class="container center header">
+        <hgroup class="hgroup">
+            <h1 class="header-title h">BebiDrink</h1>
+            <h5 class="header-subtitle h">Delivery Bar</h5>
+        </hgroup>
     </header>
 
     <!---------- Main content ---------->
@@ -72,8 +78,9 @@
 
 
     <!--===========SCRIPTS=============-->
-    <script src="./js/modal.js" type="text/javascript"></script>
-    <script src="" type="text/javascript"></script>
+    <script src="./js/modal.js" type="text/javascript"></script> <!-- Validador de edad -->
+    <script src="./js/animations.js" type="text/javascript"></script> <!-- Fondo animado del header -->
+
 
 </body>
 
