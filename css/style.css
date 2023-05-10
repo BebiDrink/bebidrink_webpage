@@ -1,518 +1,25 @@
-/* ==========================================
-****************** IMPORTS *****************
-=============================================*/
-/* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto+Flex:wght@200;400;700&display=swap");
-/* Normalizador moderno del document para todos los navegadores */
-@import url("./normalize.css");
-
-/* ==========================================
-******************VARIABLES *****************
-=============================================*/
-:root {
-    /* Fuentes */
-    --fuente-prin: "Lora", serif;
-    --fuente-sec: "Josefin Sans", sans-serif;
-    --fuente-ter: "Roboto Flex", sans-serif;
-    /* Colores*/
-    --fondo: whitesmoke;
-    --color-prin: purple;
-    --color-sec: lightgray;
-    --color-ter: violet; 
-    --color-acnt: tomato;
-
-}
-
-/* ==========================================
-*************** DOCUMENT TAGS ***************
-=============================================*/
-* {
-    text-decoration: none;
-    color: black
-}
-
-ul,
-ol {
-    list-style: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-input {
-    font-family: var(--fuente-prin);
-}
-
-p,
-h5,
-h6,
-li {
-    font-family: var(--fuente-sec);
-}
-
-a,
-button {
-    font-family: var(--fuente-ter);
-    margin: 0.5%;
-}
-
-.nav-item-links li {
-    margin: 0 5px;
-
-}
-
-/* ==========================================
-**************** CONTENEDORES ***************
-=============================================*/
-
-/* CONTENEDORES */
-.container,
-.nav-container {
-    transition: all linear 1s;
-    max-width: 100%;
-    padding: 0 10%;
-}
-
-.nav-container {
-    background-color: var(--color-sec);
-    min-height: 70px;
-    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.664);
-}
-
-/* card */
-.card {
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.642);
-    width: 80%;
-    height: 90%;
-}
-
-/* ==========================================
-****************** FLEXBOX *****************
-=============================================*/
-.flex {
-    display: flex;
-    justify-content: center;
-}
-
-/* row nowrap */
-.flexrow {
-    flex-wrap: nowrap;
-}
-
-/* row wrap */
-.flexrow-wrap {
-    flex-wrap: wrap;
-}
-
-/* row wrap-reverse */
-.flexrow-wreverse {
-    flex-wrap: wrap-reverse;
-}
-
-/* column nowrap */
-.flexcol {
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
-
-/* column wrap */
-.flexcol-wrap {
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-/* column wrap-reverse */
-.flexcol-wreverse {
-    flex-direction: column-reverse;
-    flex-wrap: wrap-reverse;
-}
-
-
-/* ==========================================
-******************** GRID *******************
-=============================================*/
-/* Para el contenedor padre */
-.grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 10px !important;
-    margin: 0px 0 !important;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-}
-
-/* Para inicializar los contenedores hijos*/
-.col {
-    grid-column: span 12 / span 12;
-    padding: 10px;
-}
-
-/* Columnas base fijas (Si no se desea especificar dispositivo)*/
-.col-1 {
-    grid-column: span 1 / span 1;
-}
-
-.col-2 {
-    grid-column: span 2 / span 2;
-}
-
-.col-3 {
-    grid-column: span 3 / span 3;
-}
-
-.col-4 {
-    grid-column: span 4 / span 4;
-}
-
-.col-5 {
-    grid-column: span 5 / span 5;
-}
-
-.col-6 {
-    grid-column: span 6 / span 6;
-}
-
-.col-7 {
-    grid-column: span 7 / span 7;
-}
-
-.col-8 {
-    grid-column: span 8 / span 8;
-}
-
-.col-9 {
-    grid-column: span 9 / span 9;
-}
-
-.col-10 {
-    grid-column: span 10 / span 10;
-}
-
-.col-11 {
-    grid-column: span 11 / span 11;
-}
-
-.col-12 {
-    grid-column: span 12 / span 12;
-}
-
-/* TAMAÑOS GRID COLUMNS RESPONSIVE (COLUMNAS PARA ABARCAR) */
-/* Dispositivos de hasta de 600px (mobiles y tablets) */
-@media only screen and (max-width: 600px) {
-    .s-1 {
-        grid-column: span 1 / span 1;
-    }
-
-    .s-2 {
-        grid-column: span 2 / span 2;
-    }
-
-    .s-3 {
-        grid-column: span 3 / span 3;
-    }
-
-    .s-4 {
-        grid-column: span 4 / span 4;
-    }
-
-    .s-5 {
-        grid-column: span 5 / span 5;
-    }
-
-    .s-6 {
-        grid-column: span 6 / span 6;
-    }
-
-    .s-7 {
-        grid-column: span 7 / span 7;
-    }
-
-    .s-8 {
-        grid-column: span 8 / span 8;
-    }
-
-    .s-9 {
-        grid-column: span 9 / span 9;
-    }
-
-    .s-10 {
-        grid-column: span 10 / span 10;
-    }
-
-    .s-11 {
-        grid-column: span 11 / span 11;
-    }
-
-    .s-12 {
-        grid-column: span 12 / span 12;
-    }
-}
-
-/* Dispositivos de mas de 600px (Tablets y otros) */
-@media only screen and (min-width: 600px) {
-    .m-1 {
-        grid-column: span 1 / span 1;
-    }
-
-    .m-2 {
-        grid-column: span 2 / span 2;
-    }
-
-    .m-3 {
-        grid-column: span 3 / span 3;
-    }
-
-    .m-4 {
-        grid-column: span 4 / span 4;
-    }
-
-    .m-5 {
-        grid-column: span 5 / span 5;
-    }
-
-    .m-6 {
-        grid-column: span 6 / span 6;
-    }
-
-    .m-7 {
-        grid-column: span 7 / span 7;
-    }
-
-    .m-8 {
-        grid-column: span 8 / span 8;
-    }
-
-    .m-9 {
-        grid-column: span 9 / span 9;
-    }
-
-    .m-10 {
-        grid-column: span 10 / span 10;
-    }
-
-    .m-11 {
-        grid-column: span 11 / span 11;
-    }
-
-    .m-12 {
-        grid-column: span 12 / span 12;
-    }
-}
-
-/* Dispositivos de mas de 900px (Desktops y +) */
-@media only screen and (min-width: 900px) {
-    .l-1 {
-        grid-column: span 1 / span 1;
-    }
-
-    .l-2 {
-        grid-column: span 2 / span 2;
-    }
-
-    .l-3 {
-        grid-column: span 3 / span 3;
-    }
-
-    .l-4 {
-        grid-column: span 4 / span 4;
-    }
-
-    .l-5 {
-        grid-column: span 5 / span 5;
-    }
-
-    .l-6 {
-        grid-column: span 6 / span 6;
-    }
-
-    .l-7 {
-        grid-column: span 7 / span 7;
-    }
-
-    .l-8 {
-        grid-column: span 8 / span 8;
-    }
-
-    .l-9 {
-        grid-column: span 9 / span 9;
-    }
-
-    .l-10 {
-        grid-column: span 10 / span 10;
-    }
-
-    .l-11 {
-        grid-column: span 11 / span 11;
-    }
-
-    .l-12 {
-        grid-column: span 12 / span 12;
-    }
-}
-
-
-
-/* ==========================================
-****************** POSICIÓN *****************
-=============================================*/
-/* ELEMENTOS CENTRADOS*/
-.center {
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-}
-
-/* elementos y texto contenido en ellos centrados*/
-.center-center {
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-    align-self: center;
-    justify-self: center;
-}
-
-/*  ALINEACIONES DE TEXTO */
-.txt-center {
-    text-align: center;
-}
-
-.txt-left {
-    text-align: left;
-}
-
-.txt-right {
-    text-align: right;
-}
-
-.txt-justify {
-    text-align: justify;
-}
-
-
-/*===================================================
-****************** BOTONES ************************
-===================================================*/
-.btn {
-    width: auto;
-    display: inline-block;
-    padding: 0.5rem 2rem;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
-    white-space: nowrap;
-    background-color: #000000;
-    color: white;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 2px -1px rgba(0, 0, 0, 0.2);
-}
-
-.btn:hover,
-.btn:focus {
-    /* background-color: #2bbbad; */
-    color: #fff;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-        0 2px 1px -1px rgba(0, 0, 0, 0.12);
-    background-color: #6a0707;
-}
-
-.btn:active {
-    /* background-color: #fc0000; */
-    color: #8a0000;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 3px -2px rgba(0, 0, 0, 0.14),
-        0 1px 8px 0 rgba(0, 0, 0, 0.12);
-}
-
-
+/* Este archivo contiene los estilos particulares
+de cada página del proyecto. No tiene elementos generales, 
+ni tampoco animaciones. */
 
 /*===================================================
 **************************************************
 ******************* INDEX ************************
 ***************************************************
 ===================================================*/
-/* MODAL VALIDACIÓN DE MAYORÍA DE EDAD */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
+.header {
     width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(79, 37, 13, 0.848);
-    backdrop-filter: blur(5px);
-}
-
-.modal-content {
+    height: 80vh;
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    position: relative;
-    background-color: #fefefe89;
-    margin: auto;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 0 100px 1px rgba(0, 0, 0, 0.375);
-    width: 70%;
-    max-width: 400px;
 }
 
-.modal--title {
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.modal--input {
-    width: 100%;
-    height: 35px;
-    border: none;
-    background-color: rgb(235, 217, 184);
-    padding: 5px;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-.modal--button {
-    width: 100%;
-    padding: 25px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(3, 2, 0);
+.header-title {
+    font-size: 5rem;
     color: white;
-    margin-top: 5px;
-}
-
-.modal--button:hover {
-    background-color: rgba(0, 0, 0, 0.561);
-    cursor: pointer;
-}
-
-.alerta-m-container {
-    width: 80%;
-    background-color: rgba(0, 0, 0, 0.557);
-}
-
-.alerta-m-image {
-    width: 100vw;
-    height: 100vh;
-    background-image: url("../images/playa.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 150%;
-    text-align: center;
+    letter-spacing: -8px;
 }
 
 
@@ -522,21 +29,23 @@ button {
 ******************* PRODUCTOS **********************
 ****************************************************
 ===================================================*/
+
 /* ex .productos ==> .img-productos*/
 .img-productos {
+    object-fit: cover; 
     padding: 5%;
     margin: 5%;
     width: 80%;
     height: 80%;
 }
 
-/****
-.img-productos {
-    object-fit: cover; <==Este acomoda la imagen al contenedor
+
+/* .img-productos {
+    object-fit: cover; 
     width: 100px; 
     height: 180px;
-} 
-****/
+}  */
+
 
 .divProductos {
     padding: 5%;
@@ -579,12 +88,74 @@ con la clase container*/
     text-align: center;
 }
 
+.ingredientes > ul {
+    padding: 10px;
+}
+
+.ingredients-items{
+    font-size: small;
+    padding: 5px;
+    margin: 0.5%;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+
+}
+
 .trago-img {
     max-width: 90%;
 }
 
+.trago-titulo {
+    font-size: 2.5rem;
+    margin: 1%;
+    color: #41295a;
+}
+
 .no-encontrado {
     width: 50%;
+}
+
+.trago-card {
+    padding: 5px 10px;
+    background-color: #ffffff8f;
+    border-radius: 5px !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.529);
+    max-width: 98% !important;
+    height: 90% !important;
+}
+
+
+.bkg-card {
+    background-color: rgb(206, 173, 197);
+    background-image: url("../images/bar2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: conver;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+}
+
+.h {
+    margin: 0;
+    padding: 0;
+}
+
+.hgroup {
+    padding: 2%;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.109);
+    border-radius: 10px;
+}
+
+.header-title {
+    text-shadow: 0 0 5px #814073;
+
+}
+
+.header-subtitle {
+    color: #2a0551;
 }
 
 /*===================================================

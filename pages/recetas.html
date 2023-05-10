@@ -20,6 +20,7 @@
         integrity="sha512-kRYkjiYH/VXxoiaDK2oGNMKIi8VQVfie1lkYGX3kmfzWNR2kfaF5ze0885W3/eE6lIiURBsZA91M/WNvCajHMw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/personalized.css">
     <link rel="stylesheet" href="../css/style.css">
 
     <!---------- CDN'S -------->
@@ -34,23 +35,24 @@
 
 <!--===========BODY=============-->
 
-<body>
+<body class="bkg-bar">
     <!---------- Navigation ---------->
-    <nav class="nav-container flex flexrow center-center">
+    <nav class="nav">
         <!-- logo -->
-        <div class="nav-item">
-            <img class="item_logo" src="../images/faviconrecipes.png" alt="">
+        <div class="nav-logo">
+            <img class="logo" src="../images/faviconrecipes.png" alt="">
         </div>
         <!-- links -->
-        <div class="nav-item">
-            <ul class="nav-item-links flex">
-                <li class="" id="item-link"><a href="../index.html">Inicio</a></li>
-                <li class="" id="item-link"><a href="./productos.html">Productos</a></li>
-                <li class="" id="item-link"><a href="./recetas.html">Recetas</a></li>
-                <li class="" id="item-link"><a href="./contacto.html">Contacto</a></li>
+        <div class="nav-links">
+            <ul class="links flex">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./recetas.html">Recetas</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </div>
     </nav>
+
 
     <!---------- Header section ---------->
     <header class="container center-center">
@@ -64,9 +66,9 @@
 
     <!---------- Main content ---------->
     <main class="container flexcol center-center">
-        <section id="coincidencias" class="center"></section>
+        <section id="coincidencias" class="container center"></section>
 
-        <section class="center">
+        <section class="container">
             
             <!-- Spinner/loader -->
             <div class="spinner" id="spinner">
@@ -74,12 +76,12 @@
                 <div class="cube2"></div>
             </div>
 
-            <article id="resultado">
+            <article id="resultado" class="flex center">
                 <!-- AQUI SE INSERTA LA TARJETA DE LA RECETA BUSCADA 
             JUNTO CON SU IMAGEN RESPECTIVA -->
-                <h2 class="">
-                    BUSCÁ TU TRAGO
-                </h2>
+                <div class="flex center v100">
+                   <h2 class="">BUSCÁ TU TRAGO</h2>
+                </div>
                 <article>
         </section>
 

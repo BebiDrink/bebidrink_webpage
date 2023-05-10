@@ -1,0 +1,572 @@
+/* Los estilos en estos selectores y tags del documento HTML
+son universales o generales para el proyecto BebiDrink */
+
+
+/* ==========================================
+****************** IMPORTS *****************
+=============================================*/
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto+Flex:wght@200;400;700&display=swap");
+/* Normalizador moderno del document para todos los navegadores */
+@import url("./normalize.css");
+
+/* ==========================================
+******************VARIABLES *****************
+=============================================*/
+:root {
+    /* Fuentes */
+    --fuente-prin: "Lora", serif;
+    --fuente-sec: "Josefin Sans", sans-serif;
+    --fuente-ter: "Roboto Flex", sans-serif;
+    /* Colores*/
+    --fondo: whitesmoke;
+    --color-prin: purple;
+    --color-sec: lightgray;
+    --color-ter: violet;
+    --color-acnt: tomato;
+}
+
+/* ==========================================
+*************** DOCUMENT TAGS ***************
+=============================================*/
+* {
+    box-sizing: border-box !important;
+    padding-inline-start: 0px;
+    text-decoration: none !important;
+    color: black;
+}
+
+body {
+    background-color: rgb(243, 239, 239);
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+input {
+    font-family: var(--fuente-prin);
+}
+
+p,
+h5,
+h6,
+li {
+    font-family: var(--fuente-sec);
+}
+
+input {
+    width: 250px;
+    height: 29px;
+    font-size: 16px;
+    padding: 5px !important;
+    cursor: text !important;
+    border-radius: 0px !important;
+}
+
+/* .v100 {
+    height: 70vh;
+    background-color: rgb(220, 111, 1);
+    background-image: url("../images/bar.jpg");
+    background-position:center;
+    background-size: cover;
+    background-blend-mode:difference;
+} */
+
+a,
+button {
+    cursor: pointer !important;
+    font-family: var(--fuente-ter);
+    margin: 0.5% !important;
+    color: black;
+}
+
+.nav {
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #41295a;
+    box-shadow: 5px 0 10px 2px rgba(0, 0, 0, 0.522) ;
+}
+
+.nav-logo {
+    margin-right: 1%;
+}
+
+.links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a {
+    color: white !important;
+    padding: 10px;
+}
+
+.links a:hover {
+    background-color: rgba(255, 255, 255, 0.155);
+}
+
+/* ==========================================
+**************** CONTENEDORES ***************
+=============================================*/
+
+.container, .nav-container, .footer-container, .main-container {
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+.nav-container {
+    background-color: var(--color-sec);
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.664) !important;
+}
+
+.form-container {
+    width: 50%;
+} 
+
+/* card */
+.card {
+    padding: 5px;
+    background-color: #ffffff8f;
+    border-radius: 5px !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.529);
+    width: 100% !important;
+    height: 90% !important;
+}
+
+/* ==========================================
+****************** FLEXBOX *****************
+=============================================*/
+.flex {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+/* row nowrap */
+.flexrow {
+    flex-wrap: nowrap !important;
+}
+
+/* row wrap */
+.flexrow-wrap {
+    flex-wrap: wrap !important;
+}
+
+/* row wrap-reverse */
+.flexrow-wreverse {
+    flex-wrap: wrap-reverse !important;
+}
+
+/* column nowrap */
+.flexcol {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+}
+
+/* column wrap */
+.flexcol-wrap {
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+}
+
+/* column wrap-reverse */
+.flexcol-wreverse {
+    flex-direction: column-reverse !important;
+    flex-wrap: wrap-reverse !important;
+}
+
+
+/* ==========================================
+******************** GRID *******************
+=============================================*/
+/* Para el contenedor padre */
+.grid {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(12, 1fr) !important;
+    grid-gap: 10px !important;
+    margin: 0px 0 !important;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+/* Para inicializar los contenedores hijos*/
+.col {
+    grid-column: span 12 / span 12;
+    padding: 10px;
+}
+
+/* Columnas base fijas (Si no se desea especificar dispositivo)*/
+.col-1 {
+    grid-column: span 1 / span 1;
+}
+
+.col-2 {
+    grid-column: span 2 / span 2;
+}
+
+.col-3 {
+    grid-column: span 3 / span 3;
+}
+
+.col-4 {
+    grid-column: span 4 / span 4;
+}
+
+.col-5 {
+    grid-column: span 5 / span 5;
+}
+
+.col-6 {
+    grid-column: span 6 / span 6;
+}
+
+.col-7 {
+    grid-column: span 7 / span 7;
+}
+
+.col-8 {
+    grid-column: span 8 / span 8;
+}
+
+.col-9 {
+    grid-column: span 9 / span 9;
+}
+
+.col-10 {
+    grid-column: span 10 / span 10;
+}
+
+.col-11 {
+    grid-column: span 11 / span 11;
+}
+
+.col-12 {
+    grid-column: span 12 / span 12;
+}
+
+/* TAMAÑOS GRID COLUMNS RESPONSIVE (COLUMNAS PARA ABARCAR) */
+/* Dispositivos de hasta de 600px (mobiles y tablets) */
+@media only screen and (max-width: 600px) {
+    .s-1 {
+        grid-column: span 1 / span 1;
+    }
+
+    .s-2 {
+        grid-column: span 2 / span 2;
+    }
+
+    .s-3 {
+        grid-column: span 3 / span 3;
+    }
+
+    .s-4 {
+        grid-column: span 4 / span 4;
+    }
+
+    .s-5 {
+        grid-column: span 5 / span 5;
+    }
+
+    .s-6 {
+        grid-column: span 6 / span 6;
+    }
+
+    .s-7 {
+        grid-column: span 7 / span 7;
+    }
+
+    .s-8 {
+        grid-column: span 8 / span 8;
+    }
+
+    .s-9 {
+        grid-column: span 9 / span 9;
+    }
+
+    .s-10 {
+        grid-column: span 10 / span 10;
+    }
+
+    .s-11 {
+        grid-column: span 11 / span 11;
+    }
+
+    .s-12 {
+        grid-column: span 12 / span 12;
+    }
+}
+
+/* Dispositivos de mas de 600px (Tablets y otros) */
+@media only screen and (min-width: 600px) {
+    .m-1 {
+        grid-column: span 1 / span 1;
+    }
+
+    .m-2 {
+        grid-column: span 2 / span 2;
+    }
+
+    .m-3 {
+        grid-column: span 3 / span 3;
+    }
+
+    .m-4 {
+        grid-column: span 4 / span 4;
+    }
+
+    .m-5 {
+        grid-column: span 5 / span 5;
+    }
+
+    .m-6 {
+        grid-column: span 6 / span 6;
+    }
+
+    .m-7 {
+        grid-column: span 7 / span 7;
+    }
+
+    .m-8 {
+        grid-column: span 8 / span 8;
+    }
+
+    .m-9 {
+        grid-column: span 9 / span 9;
+    }
+
+    .m-10 {
+        grid-column: span 10 / span 10;
+    }
+
+    .m-11 {
+        grid-column: span 11 / span 11;
+    }
+
+    .m-12 {
+        grid-column: span 12 / span 12;
+    }
+}
+
+/* Dispositivos de mas de 900px (Desktops y +) */
+@media only screen and (min-width: 900px) {
+    .l-1 {
+        grid-column: span 1 / span 1;
+    }
+
+    .l-2 {
+        grid-column: span 2 / span 2;
+    }
+
+    .l-3 {
+        grid-column: span 3 / span 3;
+    }
+
+    .l-4 {
+        grid-column: span 4 / span 4;
+    }
+
+    .l-5 {
+        grid-column: span 5 / span 5;
+    }
+
+    .l-6 {
+        grid-column: span 6 / span 6;
+    }
+
+    .l-7 {
+        grid-column: span 7 / span 7;
+    }
+
+    .l-8 {
+        grid-column: span 8 / span 8;
+    }
+
+    .l-9 {
+        grid-column: span 9 / span 9;
+    }
+
+    .l-10 {
+        grid-column: span 10 / span 10;
+    }
+
+    .l-11 {
+        grid-column: span 11 / span 11;
+    }
+
+    .l-12 {
+        grid-column: span 12 / span 12;
+    }
+}
+
+
+
+/* ==========================================
+****************** POSICIÓN *****************
+=============================================*/
+/* ELEMENTOS CENTRADOS*/
+.center {
+    justify-content: center !important;
+    justify-items: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+/* elementos y texto contenido en ellos centrados*/
+.center-center {
+    justify-content: center !important;
+    justify-items: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    align-self: center !important;
+    justify-self: center !important;
+}
+
+/*  ALINEACIONES DE TEXTO */
+.txt-center {
+    text-align: center;
+}
+
+.txt-left {
+    text-align: left;
+}
+
+.txt-right {
+    text-align: right;
+}
+
+.txt-justify {
+    text-align: justify;
+}
+
+
+/*===================================================
+****************** BOTONES ************************
+===================================================*/
+.btn {
+    border: none !important;
+    border-radius: 0px !important;
+    width: auto;
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #000000 !important;
+    color: white;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 2px -1px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover,
+.btn:focus {
+    /* background-color: #2bbbad; */
+    color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+        0 2px 1px -1px rgba(0, 0, 0, 0.12);
+    background-color: #6a0707;
+}
+
+.btn:active {
+    /* background-color: #fc0000; */
+    color: #8a0000;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 3px -2px rgba(0, 0, 0, 0.14),
+        0 1px 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+/*===================================================
+****************** VALIDACION EDAD ******************
+===================================================*/
+/* MODAL VALIDACIÓN DE MAYORÍA DE EDAD */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(79, 37, 13, 0.848);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #fefefe89;
+    margin: auto;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 100px 1px rgba(0, 0, 0, 0.375);
+    width: 70%;
+    max-width: 400px;
+}
+
+.modal--title {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.modal--input {
+    width: 100%;
+    height: 35px;
+    border: none;
+    background-color: rgb(235, 217, 184);
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.modal--button {
+    width: 100%;
+    padding: 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(3, 2, 0);
+    color: white;
+    margin-top: 5px;
+}
+
+.modal--button:hover {
+    background-color: rgba(0, 0, 0, 0.561);
+    cursor: pointer;
+}
+
+.alerta-m-container {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.557);
+}
+
+.alerta-m-image {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/playa.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 150%;
+    text-align: center;
+}
