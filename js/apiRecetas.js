@@ -60,13 +60,13 @@ function opcionesApi(tragoBuscado, key) {
                     return resultadosTragos;
                 })
                 .catch((error) => {
-                    console.log("ERROR: no se pudieron cargar los datos");
+                    console.log(error, "ERROR: no se pudieron cargar los datos");
                     NoEncontrado(tragoBuscado)
                     cargando("off")
                 });
         })
         .catch((error) => {
-            console.log("ERROR: no se pudo leer la imagen");
+            console.log(error, "ERROR: no se pudo leer la imagen");
             NoEncontrado(tragoBuscado)
         });
 }
@@ -184,14 +184,14 @@ function enviarResultado(nombre, imagen, ingredientes, instrucciones, destino) {
         <!-- INGREDIENTES -->
        <div class='grid col m-12 l-6 container'>   
             <div class='ingredientes col s-12'>
-                <h3>INGREDIENTS</h3>
+                <h3 class="ingredients-title">INGREDIENTS</h3>
                 ${listaIngredientes(ingredientes)}
             </div>
 
             <!-- INSTRUCCIONES -->    
             <div class='instrucciones col s-12'>
-                <h3>INSTRUCTIONS</h3>
-                <p class='container'>${instrucciones}</p>
+                <h3 class="instructions-title">INSTRUCTIONS</h3>
+                <p class='container instructions-text'>${instrucciones}</p>
                 <br>
             </div>  
         </div>
