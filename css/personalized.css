@@ -19,11 +19,12 @@ son universales o generales para el proyecto BebiDrink */
     --fuente-sec: "Josefin Sans", sans-serif;
     --fuente-ter: "Roboto Flex", sans-serif;
     /* Colores*/
-    --fondo: whitesmoke;
-    --color-prin: purple;
+    --fondo: hsl(29, 100%, 90%) !important;
+    --color-prin: #2d0c3f !important;
     --color-sec: lightgray;
-    --color-ter: violet;
-    --color-acnt: tomato;
+    --color-ter: #e1dddd;
+    --color-acnt: #ff9001;
+    --color-txt: #1a122c;
 }
 
 /* ==========================================
@@ -37,7 +38,8 @@ son universales o generales para el proyecto BebiDrink */
 }
 
 body {
-    background-color: rgb(243, 239, 239);
+    background-color: var(--fondo);
+    height: auto;
 }
 
 ul,
@@ -53,20 +55,28 @@ input {
     font-family: var(--fuente-prin);
 }
 
+input {
+    background-color: var(--color-ter);
+}
+
 p,
 h5,
 h6,
 li {
     font-family: var(--fuente-sec);
+    color: var(--color-txt);
 }
 
 input {
-    width: 250px;
+    width: 240px;
     height: 29px;
     font-size: 16px;
-    padding: 5px !important;
+    padding: 10px !important;
     cursor: text !important;
-    border-radius: 0px !important;
+    border-radius: 5px !important;
+    box-shadow: 0 0 1px 1px #331653ae;
+    border: none;
+    margin: 0.5%;
 }
 
 /* .v100 {
@@ -84,6 +94,8 @@ button {
     font-family: var(--fuente-ter);
     margin: 0.5% !important;
     color: black;
+    border-radius: 5px !important;
+    font-size: small;
 }
 
 .nav {
@@ -93,7 +105,7 @@ button {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    background-color: #41295a;
+    background-color: var(--color-prin);
     box-shadow: 5px 0 10px 2px rgba(0, 0, 0, 0.522) ;
 }
 
@@ -111,6 +123,7 @@ button {
 .links a {
     color: white !important;
     padding: 10px;
+    text-transform: uppercase;
 }
 
 .links a:hover {
@@ -122,7 +135,8 @@ button {
 =============================================*/
 
 .container, .nav-container, .footer-container, .main-container {
-    padding: 10px 20px;
+    padding: 20px;
+    margin: 0;
     width: 100%;
   }
 
@@ -457,7 +471,7 @@ button {
 ===================================================*/
 .btn {
     border: none !important;
-    border-radius: 0px !important;
+    border-radius: 5px !important;
     width: auto;
     display: inline-block;
     padding: 0.5rem 2rem;
@@ -466,25 +480,18 @@ button {
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
-    background-color: #000000 !important;
+    background-color: var(--color-acnt) !important;
     color: white;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 2px -1px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover,
-.btn:focus {
+.btn:focus,
+.btn:active {
     /* background-color: #2bbbad; */
-    color: #fff;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
         0 2px 1px -1px rgba(0, 0, 0, 0.12);
-    background-color: #6a0707;
-}
-
-.btn:active {
-    /* background-color: #fc0000; */
-    color: #8a0000;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 3px -2px rgba(0, 0, 0, 0.14),
-        0 1px 8px 0 rgba(0, 0, 0, 0.12);
+    background-color: var(--color-prin) !important;
 }
 
 

@@ -2,10 +2,11 @@
 de cada página del proyecto. No tiene elementos generales, 
 ni tampoco animaciones. */
 
+
 /*===================================================
 **************************************************
-******************* INDEX ************************
-***************************************************
+******************* PÁGINA INDEX *****************
+**************************************************
 ===================================================*/
 .header {
     width: 100%;
@@ -23,10 +24,46 @@ ni tampoco animaciones. */
 }
 
 
+.h {
+    margin: 0;
+    padding: 0;
+}
+
+.hgroup {
+    padding: 2%;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.109);
+    border-radius: 10px;
+}
+
+.header-title {
+    text-shadow: 0 0 5px #814073;
+}
+
+.header-subtitle {
+    color: #2a0551;
+}
+
+.card-description {
+    padding: 5px;
+    background-color: var(--color-prin);
+    border-radius: 5px !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.529);
+    width: 100% !important;
+    height: 90% !important;
+}
+
+.card-description > h4,
+.card-description > i,
+.card-description > p {
+    color: white !important;
+    font-weight: 100;
+}
 
 /*===================================================
 ****************************************************
-******************* PRODUCTOS **********************
+***************** PÁGINA PRODUCTOS *****************
 ****************************************************
 ===================================================*/
 
@@ -79,9 +116,32 @@ con la clase container*/
 
 /*===================================================
 ****************************************************
-**************** RECETAS TRAGOS ********************
+**************** PÁGINA TRAGOS *********************
 ****************************************************
 ===================================================*/
+
+.header-receta {
+    height: auto;
+    width: 100%;
+}
+
+.titulo-recetas {
+    color: var(--color-prin);
+    font-size: 2rem;
+}
+
+
+.recetas-hero {
+    width: 50%;
+    height: 50px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.recetas-hero-text {
+    color: var(--color-txt);
+    font-size: xx-large;
+}
 
 .ingredientes h3,
 .instrucciones h3 {
@@ -97,9 +157,17 @@ con la clase container*/
     padding: 5px;
     margin: 0.5%;
     border-radius: 5px;
-    background-color: black;
+    background-color: var(--color-prin);
     color: white;
+}
 
+.ingredients-title,
+.instructions-title {
+    color: var(--color-acnt);
+}
+
+.instructions-text {
+    color: var(--color-prin);
 }
 
 .trago-img {
@@ -109,7 +177,7 @@ con la clase container*/
 .trago-titulo {
     font-size: 2.5rem;
     margin: 1%;
-    color: #41295a;
+    color: var(--color-prin);
 }
 
 .no-encontrado {
@@ -136,36 +204,18 @@ con la clase container*/
     background-attachment: fixed;
 }
 
-.h {
-    margin: 0;
-    padding: 0;
-}
-
-.hgroup {
-    padding: 2%;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.109);
-    border-radius: 10px;
-}
-
-.header-title {
-    text-shadow: 0 0 5px #814073;
-
-}
-
-.header-subtitle {
-    color: #2a0551;
-}
-
 /*===================================================
 ****************************************************
-**************** FORMULARIO ********************
+**************** PÁGINA FORMULARIO *****************
 ****************************************************
 ===================================================*/
 
+
+
+
+
 /*===================================================
 ****************************************************
-**************** VALIDACIÓN ********************
+**************** PÁGINA VALIDACIÓN *****************
 ****************************************************
 ===================================================*/
