@@ -11,45 +11,55 @@
     <meta name="author" content="autores separados por comas">
     
     <!---------- Favicon ---------->
-    <link rel="shortcut icon" type="image/png" href="ruta/imagen.png">
+    <link rel="shortcut icon" type="image/png" href="../images/faviconrecipes.png">
     <!---------- links ---------->
+    <link rel="stylesheet" href="../css/personalized.css">
     <link rel="stylesheet" href="./../css/style.css">
     
     <!---------- CDN'S -------->
+    <script src="https://kit.fontawesome.com/cac8e89f4d.js" crossorigin="anonymous"></script>
     
     <!---------- title ---------->
-    <title>Document</title>
+    <title>BebiDrink Store</title>
 </head>
     
 <!--===========BODY=============-->
 <body>
     <!---------- Navigation ---------->
-    <nav class="">
-        <div class="nav-item">
-            <img class="item_logo" src="./images/logo.png" alt="">
-            🍹LOGO
+    <nav class="nav">
+        <!-- logo -->
+        <div class="nav-logo">
+            <img class="logo" src="../images/faviconrecipes.png" alt="">
         </div>
-        <div class="nav-item">
-            <ul class="nav-item-links">
-                <li class="" id="item-link"><a href="../index.html">Inicio</a></li>
-                <li class="" id="item-link"><a href="./productos.html">Productos</a></li>
-                <li class="" id="item-link"><a href="./recetas.html">Recetas</a></li>
-                <li class="" id="item-link"><a href="./contacto.html">Contacto</a></li>
+        <!-- links -->
+        <div class="nav-links">
+            <ul class="links flex">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./recetas.html">Recetas</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </div>
     </nav>
     
     <!---------- Header section ---------->
-    <header class="">
+    <!-- GABY el "container" genera un padding, "center" centra texto/elementos  :) -->
+    <header class="container center">
         <h1>PRODUCTOS</h1>
     </header>
     
     <!---------- Main content ---------->
-    <main class="">
-        <section class="container">
-            <article class="">
-            <article>
-        </section>
+
+    <!-- Te deje estas clases de ejemplo para <main> por si quieres probar:
+        id="main" class="container flex flexcol center-center" -->
+    <main id="productos" class="">
+
+        <!-- [Ejemplo para <section>] ==> id="productos" class="grid" 
+            [esto convertira el contenedor en grid y a ese grid se van a ir
+            agregando los productos. Gaby, en scripts.js te deje como comentarios las clases "col" que van
+            en cada div del producto por si quieres ir probando la cantidad de columnas y eso y modificarlas.]-->
+        <section id="" class=""></section>
+        
     </main>
     
     <!---------- title ---------->

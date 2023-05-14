@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-    
+
 <!--===========HEAD=============-->
+
 <head>
     <!---------- metas ---------->
     <meta charset="UTF-8">
@@ -9,54 +10,96 @@
     <meta name="description" content="Descripción de la página bebidrink">
     <meta name="keywords" content="palabras clave separadas por coma">
     <meta name="author" content="autores separados por comas">
-    
+
     <!---------- Favicon ---------->
-    <link rel="shortcut icon" type="image/png" href="ruta/imagen.png">
-    <!---------- links ---------->
-    <link rel="stylesheet" href="./css/style.css">
-    
+    <link rel="shortcut icon" type="image/png" href="../images/faviconrecipes.png">
+
     <!---------- CDN'S -------->
-    
+    <script src="https://kit.fontawesome.com/cac8e89f4d.js" crossorigin="anonymous"></script>
+
+    <!---------- links ---------->
+    <link rel="stylesheet" href="../css/personalized.css">
+    <link rel="stylesheet" href="../css/style.css">
+
     <!---------- title ---------->
-    <title>Document</title>
+    <title>Contacto</title>
 </head>
-    
+
 <!--===========BODY=============-->
+
 <body>
     <!---------- Navigation ---------->
-    <nav class="">
-        <div class="nav-item">
-            <img class="item_logo" src="./images/logo.png" alt="">
-            🍹LOGO
+    <nav class="nav">
+        <!-- logo -->
+        <div class="nav-logo">
+            <img class="logo" src="../images/faviconrecipes.png" alt="">
         </div>
-        <div class="nav-item">
-            <ul class="nav-item-links">
-                <li class="" id="item-link"><a href="../index.html">Inicio</a></li>
-                <li class="" id="item-link"><a href="./productos.html">Productos</a></li>
-                <li class="" id="item-link"><a href="./recetas.html">Recetas</a></li>
-                <li class="" id="item-link"><a href="./contacto.html">Contacto</a></li>
+        <!-- links -->
+        <div class="nav-links">
+            <ul class="links flex">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./recetas.html">Recetas</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </div>
     </nav>
-    
+
     <!---------- Header section ---------->
-    <header class="">
+    <header class="container center">
         <h1>CONTACTO</h1>
     </header>
-    
+
     <!---------- Main content ---------->
     <main class="">
-        <section class="">
-            <article class="">
-            <article>
+        <section class="container flex center-center">
+            <form class="card grid center-center" id="contact-form" action="submit-form.js" method="post"
+                onsubmit="return validateForm()">
+                <label class="col l-12" for="name">Nombre:</label>
+                <input class="col l-12" type="text" id="name" name="name">
+
+                <label class="col l-12" for="email">Email:</label>
+                <input class="col" type="email" id="email" name="email">
+
+                <label class="col" for="message">Mensaje:</label>
+                <textarea class="col" id="message" name="message"></textarea>
+
+                <button class="btn center" type="submit">Enviar</button>
+            </form>
+
         </section>
     </main>
-    
+
     <!---------- title ---------->
     <footer class="">
     </footer>
 
     <!--===========SCRIPTS=============-->
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            if (name == "" || email == "" || message == "") {
+                alert("Por favor, rellene todos los campos requeridos.");
+                return false;
+            }
+
+            if (!validateEmail(email)) {
+                alert("Por favor, ingrese una dirección de correo electrónico válida.");
+                return false;
+            }
+
+            return true;
+        }
+
+        function validateEmail(email) {
+            var re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+
+    </script>
     <script src="" type="text/javascript"></script>
     <script src="" type="text/javascript"></script>
     <script src="" type="text/javascript"></script>

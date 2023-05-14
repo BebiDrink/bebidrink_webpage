@@ -1,39 +1,221 @@
+/* Este archivo contiene los estilos particulares
+de cada página del proyecto. No tiene elementos generales, 
+ni tampoco animaciones. */
 
 
-* {
+/*===================================================
+**************************************************
+******************* PÁGINA INDEX *****************
+**************************************************
+===================================================*/
+.header {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-title {
+    font-size: 5rem;
+    color: white;
+    letter-spacing: -8px;
+}
+
+
+.h {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-.productos {   
-    padding: 5%;
-    margin:5%;
-    width: 80%;
-    height: 80%;}
 
-.divProductos{ 
+.hgroup {
+    padding: 2%;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.109);
+    border-radius: 10px;
+}
+
+.header-title {
+    text-shadow: 0 0 5px #814073;
+}
+
+.header-subtitle {
+    color: #2a0551;
+}
+
+.card-description {
+    padding: 5px;
+    background-color: var(--color-prin);
+    border-radius: 5px !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.529);
+    width: 100% !important;
+    height: 90% !important;
+}
+
+.card-description > h4,
+.card-description > i,
+.card-description > p {
+    color: white !important;
+    font-weight: 100;
+}
+
+/*===================================================
+****************************************************
+***************** PÁGINA PRODUCTOS *****************
+****************************************************
+===================================================*/
+
+/* ex .productos ==> .img-productos*/
+.img-productos {
+    object-fit: cover; 
     padding: 5%;
-    margin:5%;
-border:transparent;
-border-color: grey;
-box-shadow: 0px 0px 30px grey;
-border-radius: 10%;
-width: 100%;
-height: 100%;
+    margin: 5%;
+    width: 80%;
+    height: 80%;
+}
+
+
+/* .img-productos {
+    object-fit: cover; 
+    width: 100px; 
+    height: 180px;
+}  */
+
+
+.divProductos {
+    padding: 5%;
+    margin: 5%;
+    border: transparent;
+    border-color: grey;
+    box-shadow: 0px 0px 30px grey;
+    border-radius: 10%;
+    width: 100%;
+    height: 100%;
 }
 
 .divProductos:hover {
     box-shadow: 0px 0px 30px gold;
-  }
+}
 
-.container{
+/* ex .container ==> #productos: container generaba conflictos, ya que 
+el script iba a insertar imágenes en cualquier etiqueta
+con la clase container*/
+#productos {
     display: grid;
-    gap:30px;
+    gap: 30px;
     text-align: center;
     padding: 10%;
-    grid-template-columns:2fr 2fr 2fr 2fr;
-    grid-template-rows:2fr 2fr 2fr;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr;
     width: 900px;
     height: 900px;
-
 }
+
+
+/*===================================================
+****************************************************
+**************** PÁGINA TRAGOS *********************
+****************************************************
+===================================================*/
+
+.header-receta {
+    height: auto;
+    width: 100%;
+}
+
+.titulo-recetas {
+    color: var(--color-prin);
+    font-size: 2rem;
+}
+
+
+.recetas-hero {
+    width: 50%;
+    height: 50px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.recetas-hero-text {
+    color: var(--color-txt);
+    font-size: xx-large;
+}
+
+.ingredientes h3,
+.instrucciones h3 {
+    text-align: center;
+}
+
+.ingredientes > ul {
+    padding: 10px;
+}
+
+.ingredients-items{
+    font-size: small;
+    padding: 5px;
+    margin: 0.5%;
+    border-radius: 5px;
+    background-color: var(--color-prin);
+    color: white;
+}
+
+.ingredients-title,
+.instructions-title {
+    color: var(--color-acnt);
+}
+
+.instructions-text {
+    color: var(--color-prin);
+}
+
+.trago-img {
+    max-width: 90%;
+}
+
+.trago-titulo {
+    font-size: 2.5rem;
+    margin: 1%;
+    color: var(--color-prin);
+}
+
+.no-encontrado {
+    width: 50%;
+}
+
+.trago-card {
+    padding: 5px 10px;
+    background-color: #ffffff8f;
+    border-radius: 5px !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.529);
+    max-width: 98% !important;
+    height: 90% !important;
+}
+
+
+.bkg-card {
+    background-color: rgb(206, 173, 197);
+    background-image: url("../images/bar2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: conver;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+}
+
+/*===================================================
+****************************************************
+**************** PÁGINA FORMULARIO *****************
+****************************************************
+===================================================*/
+
+
+
+
+
+/*===================================================
+****************************************************
+**************** PÁGINA VALIDACIÓN *****************
+****************************************************
+===================================================*/
