@@ -1,7 +1,6 @@
 function agregarImg(datos) {
   console.log(datos);
   const div = document.querySelector("#productos"); //container => #productos
-  console.log(div);
   for (let index = 0; index < datos.bebidas.length; index++) {
     const divImg = document.createElement("div");
 
@@ -37,11 +36,8 @@ function agregarImg(datos) {
 const request = async (url) => {
   const response = await fetch(url);
   if (!response.ok) throw new Error("WARN", response.status);
-  console.log(response);
   const data = await response.json();
-  console.log("data antes del llamado a la funcion:" + data);
   agregarImg(data);
-  console.log(data);
 };
 
 const datos = request("./../data/productos.json");
