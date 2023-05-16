@@ -71,7 +71,6 @@ function opcionesApi(tragoBuscado, key) {
         });
 }
 
-
 /* ====================================================================== */
 function obtenerSeleccionado(tragoBuscado, key) {
     cargando("on")
@@ -259,6 +258,7 @@ function interseccion(array1, array2) {
 
     return iguales;
 }
+
 /* ====================================================================== */
 function videoSugerencia() {
     /* Experimental. Devuelve un iframe de video sugerencia 
@@ -275,7 +275,6 @@ function videoSugerencia() {
     `;
 }
 
-
 function NoEncontrado(tragoBuscado){
     cargando("off")
     coincidencias.innerHTML = "";
@@ -288,14 +287,6 @@ function NoEncontrado(tragoBuscado){
 
     
 }
-
-
-
-
-
-
-
-
 
 /* ====================================================================== */
 function agregarEventos() {
