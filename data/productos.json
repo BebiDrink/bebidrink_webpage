@@ -49,14 +49,6 @@
 ]
 },
 {
-"name": "Champagne Mathie & Claudine",
-"rutaImagen": "./../images/products-imgs/champagne.png",
-"descripcion": [
-  "Bebida Alcoholica ",
-  "750 cc"
-]
-},
-{
 "name": "Fernet Branca",
 "rutaImagen": "./../images/products-imgs/fernet.jpg",
 "descripcion": [

@@ -24,7 +24,7 @@
 </head>
     
 <!--===========BODY=============-->
-<body>
+<body class="catalogo">
     <!---------- Navigation ---------->
     <nav class="nav">
         <!-- logo -->
@@ -46,20 +46,71 @@
     <!---------- Header section ---------->
     <!-- GABY el "container" genera un padding, "center" centra texto/elementos  :) -->
     <header class="container center">
-        <h1>PRODUCTOS</h1>
+        <h1>Catálogo BebiDrink</h1>
     </header>
-    <h3 class="container center">Estos son los productos estrella de nuestro catalogo, si quieres ver el catalogo completo haz click <a href="./catalogo.html" >aquí</a></h3>
-
+    
     <!---------- Main content ---------->
 
     <!-- Te deje estas clases de ejemplo para <main> por si quieres probar:
         id="main" class="container flex flexcol center-center" -->
-    <main id="productos" class="container center">
-                <!-- [Ejemplo para <section>] ==> id="productos" class="grid" 
-            [esto convertira el contenedor en grid y a ese grid se van a ir
-            agregando los productos. Gaby, en scripts.js te deje como comentarios las clases "col" que van
-            en cada div del producto por si quieres ir probando la cantidad de columnas y eso y modificarlas.]-->
-        <section id="" class=""></section>
+    <main id="nosotros" class="">
+
+ 
+        <section id="" class="container center">
+          <h3>  <p class="cabTabla"> APERITIVOS </p> </h3>
+          <table class="container center">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="tAperitivos">
+
+            </tbody>
+        </table>
+        <h3>  <p class="cabTabla"> BEBIDAS </p> </h3>
+        <table class="container center">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                   
+                </tr>
+            </thead>
+            <tbody id="tBebidas">
+
+            </tbody>
+        </table>
+        <h3>  <p class="cabTabla"> CERVEZAS </p> </h3>
+        <table class="container center">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="tCervezas">
+
+            </tbody>
+        </table>
+        <h3>  <p class="cabTabla"> VINOS </p> </h3>
+
+        <table class="container center">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="tVinos">
+
+            </tbody>
+        </table>
+        </section>
         
     </main>
     
@@ -68,7 +119,7 @@
     </footer>
 
     <!--===========SCRIPTS=============-->
-    <script src="./../js/scripts.js" type="text/javascript"></script>
+    <script src="./../js/catalogo.js" type="text/javascript"></script>
     <script src="" type="text/javascript"></script>
     <script src="" type="text/javascript"></script>
 </body>
