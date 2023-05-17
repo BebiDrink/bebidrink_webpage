@@ -1,40 +1,34 @@
 {
-    "nosotros" : [
-    {
-      "name": "Reunion de Amigos",
-      "rutaImagen": "./../images/index-imgs/salida_de_amigos.jpg",
-      "textoSlide":
-        "Estamos presentes en tus reuniones con amigos, ofreciendote una gran variedad de bebidas para que puedas disfrutarlas con ellos al alcance de un click"
-    }, 
-  {
-      "name": "Citas",
-      "rutaImagen": "./../images/index-imgs/citas.jpg",
-      "textoSlide":
-      "Tambien en tus fechas especiales con espumantes importados de primera calidad"
-  }, 
-  {
-    "name": "Fin de Semana",
-    "rutaImagen": "./../images/index-imgs/picadita_en_casa.jpg",
-    "textoSlide":
-    "Dale un toque distinto a tus fin de semanas con nuestra carta especial de vinos"
-},
-{
-    "name": "Eventos",
-    "rutaImagen": "./../images/index-imgs/tus_eventos.jpg",
-    "textoSlide":
-    "Podés reservar todas las bebidas para tus eventos mas importantes que contamos siempre con stock"
-}, 
-{
-    "name": "Prepara tus propios tragos",
-    "rutaImagen": "./../images/index-imgs/prepara_tus_tragos.jpg",
-    "textoSlide":
-    "En esta página no solo podras encontrar gran variedad de bebidas, tambien te ayudamos preparar tus tragos"
-}, 
-{
-    "name": "Bartender a domicilio",
-    "rutaImagen": "./../images/index-imgs/bartender_domicilio.jpg",
-    "textoSlide":
-    "Y si no te animas a prepararlos solo, te ofrecemos el servicio de Bartender a Domicilio. Reserva tu fecha y nos ponemos en contacto con vos"
-}
-]
+    "nosotros": [
+        {
+            "name": "Reunion de Amigos",
+            "rutaImagen": "./../images/index-imgs/salida_de_amigos.jpg",
+            "textoSlide": "Estamos presentes en tus <span>reuniones</span> con amigos, ofreciendote una gran variedad de bebidas para que puedas disfrutarlas con ellos al alcance de un click"
+        },
+        {
+            "name": "Citas",
+            "rutaImagen": "./../images/index-imgs/citas.jpg",
+            "textoSlide": "Tambien en tus fechas especiales con espumantes importados de primera <span>calidad</span>"
+        },
+        {
+            "name": "Fin de Semana",
+            "rutaImagen": "./../images/index-imgs/picadita_en_casa.jpg",
+            "textoSlide": "Dale un toque distinto a tus fines de semana con nuestra carta especial de <span>vinos</span>"
+        },
+        {
+            "name": "Eventos",
+            "rutaImagen": "./../images/index-imgs/tus_eventos.jpg",
+            "textoSlide": "Podés <span>reservar</span> todas las bebidas para tus eventos mas importantes que contamos siempre con stock"
+        },
+        {
+            "name": "Prepara tus propios tragos",
+            "rutaImagen": "./../images/index-imgs/prepara_tus_tragos.jpg",
+            "textoSlide": "En esta página no solo podras encontrar gran variedad de bebidas, tambien te ayudamos <span>preparar</span> tus tragos"
+        },
+        {
+            "name": "Bartender a domicilio",
+            "rutaImagen": "./../images/index-imgs/bartender_domicilio.jpg",
+            "textoSlide": "Y si no te animas a prepararlos solo, te ofrecemos el servicio de <span>Bartender</span> a Domicilio. Reserva tu fecha y nos ponemos en contacto con vos"
+        }
+    ]
 }

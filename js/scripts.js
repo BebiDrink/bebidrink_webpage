@@ -18,7 +18,7 @@ function agregarImg(datos) {
            12 columas.
       =======================================> 
     */
-    divImg.className = "divProductos"; // <== ejemplo: "divProductos card col l-3 m-4 s-6" 
+    divImg.className = "card l-3 m-4 s-12 "; // <== ejemplo: "divProductos card col l-3 m-4 s-6" 
 
     div.appendChild(divImg);
     const img = document.createElement("img");
@@ -27,9 +27,12 @@ function agregarImg(datos) {
     img.className = "img-productos"; //productos => img-productos
     const p = document.createElement("p");
     p.textContent = datos.bebidas[index].name;
+    
     console.log(datos.bebidas[index].name);
     divImg.appendChild(img);
     divImg.appendChild(p);
+    divImg.appendChild(document.createElement("br"));
+
   }
 }
 

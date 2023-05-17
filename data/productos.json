@@ -1,102 +1,100 @@
 {
-  "bebidas" : [
-  {
-    "name": "Dr Lemon",
-    "rutaImagen": "./../images/products-imgs/drLemon.jpg",
-    "descripcion":[
-      "Bebida Alcoholica sabor a Limon",
-      "500 cc"
-    ]
-  }, 
-{
-    "name": "Cerveza Budweiser",
-    "rutaImagen": "./../images/products-imgs/cervezaBud.jpg",
-    "descripcion": [
-      "Bebida Alcoholica ",
-      "750 cc"
-    ]
-},
-{
-  "name": "Anis 8 hnos",
-  "rutaImagen": "./../images/products-imgs/anis8Hnos.jpg",
-  "descripcion": [
-    "Bebida Alcoholica ",
-    "750 cc"
+  "bebidas": [
+    {
+      "name": "Dr Lemon",
+      "rutaImagen": "./../images/products-imgs/drLemon.jpg",
+      "descripcion": [
+        "Bebida Alcoholica sabor a Limon",
+        "500 cc"
+      ]
+    },
+    {
+      "name": "Cerveza Budweiser",
+      "rutaImagen": "./../images/products-imgs/cervezaBud.jpg",
+      "descripcion": [
+        "Bebida Alcoholica ",
+        "750 cc"
+      ]
+    },
+    {
+      "name": "Anis 8 hnos",
+      "rutaImagen": "./../images/products-imgs/anis8Hnos.jpg",
+      "descripcion": [
+        "Bebida Alcoholica ",
+        "750 cc"
+      ]
+    },
+    {
+      "name": "Cerveza Heineken",
+      "rutaImagen": "./../images/products-imgs/heineken.png",
+      "descripcion": [
+        "Bebida Alcoholica ",
+        "750 cc"
+      ]
+    },
+    {
+      "name": "Campari",
+      "rutaImagen": "./../images/products-imgs/campari.jpg",
+      "descripcion": [
+        "Bebida Alcoholica ",
+        "750 cc"
+      ]
+    },
+    {
+      "name": "Champagne Mathie & Claudine",
+      "rutaImagen": "./../images/products-imgs/champagne.png",
+      "descripcion": [
+        "Bebida Alcoholica ",
+        "750 cc"
+      ]
+    },
+    {
+      "name": "Fernet Branca",
+      "rutaImagen": "./../images/products-imgs/fernet.jpg",
+      "descripcion": [
+        "Bebida Alcoholica ",
+        "750 cc"
+      ]
+    },
+    {
+      "name": "Gin Friedrich",
+      "rutaImagen": "./../images/products-imgs/gin.png",
+      "descripcion": [
+        "Bebida Alcoholica ",
+        "750 cc"
+      ]
+    },
+    {
+      "name": "Licor Rémi Martin",
+      "rutaImagen": "./../images/products-imgs/licor.jpg",
+      "descripcion": [
+        "Bebida Alcoholica ",
+        "750 cc"
+      ]
+    },
+    {
+      "name": "Whisky Chivas Regal",
+      "rutaImagen": "./../images/products-imgs/whisky.jpg",
+      "descripcion": [
+        "Bebida Alcoholica ",
+        "750 cc"
+      ]
+    },
+    {
+      "name": "vodka New Style",
+      "rutaImagen": "./../images/products-imgs/vodkaNewStyle.jpg",
+      "descripcion": [
+        "Bebida Alcoholica ",
+        "750 cc"
+      ]
+    },
+    {
+      "name": "Vino Chateau de France",
+      "rutaImagen": "./../images/products-imgs/vino.png",
+      "descripcion": [
+        "Bebida Alcoholica ",
+        "750 cc"
+      ]
+    }
   ]
-},
-{
-"name": "Cerveza Heineken",
-"rutaImagen": "./../images/products-imgs/heineken.png",
-"descripcion": [
-  "Bebida Alcoholica ",
-  "750 cc"
-]
-},
-{
-"name": "Campari",
-"rutaImagen": "./../images/products-imgs/campari.jpg",
-"descripcion": [
-  "Bebida Alcoholica ",
-  "750 cc"
-]
-},
-{
-"name": "Champagne Mathie & Claudine",
-"rutaImagen": "./../images/products-imgs/champagne.png",
-"descripcion": [
-  "Bebida Alcoholica ",
-  "750 cc"
-]
-},
-{
-"name": "Fernet Branca",
-"rutaImagen": "./../images/products-imgs/fernet.jpg",
-"descripcion": [
-  "Bebida Alcoholica ",
-  "750 cc"
-]
-},
-{
-"name": "Gin Friedrich",
-"rutaImagen": "./../images/products-imgs/gin.png",
-"descripcion": [
-  "Bebida Alcoholica ",
-  "750 cc"
-]
-},
-{
-"name": "Licor Rémi Martin",
-"rutaImagen": "./../images/products-imgs/licor.jpg",
-"descripcion": [
-  "Bebida Alcoholica ",
-  "750 cc"
-]
-},
-{
-"name": "Whisky Chivas Regal",
-"rutaImagen": "./../images/products-imgs/whisky.jpg",
-"descripcion": [
-  "Bebida Alcoholica ",
-  "750 cc"
-]
-},
-
-{
-"name": "vodka New Style",
-"rutaImagen": "./../images/products-imgs/vodkaNewStyle.jpg",
-"descripcion": [
-  "Bebida Alcoholica ",
-  "750 cc"
-]
-},
-{
-"name": "Vino Chateau de France",
-"rutaImagen": "./../images/products-imgs/vino.png",
-"descripcion": [
-  "Bebida Alcoholica ",
-  "750 cc"
-]
-}
-]
-
 }

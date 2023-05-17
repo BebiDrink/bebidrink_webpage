@@ -2,6 +2,15 @@
 de cada página del proyecto. No tiene elementos generales, 
 ni tampoco animaciones. */
 
+:root {
+    /* Colores*/
+    --fondo: hsl(29, 100%, 90%) !important;
+    --color-prin: #2d0c3f !important;
+    --color-sec: lightgray;
+    --color-ter: #e1dddd;
+    --color-acnt: #ff9001;
+    --color-txt: #1c0a26 ;
+}
 
 /*===================================================
 **************************************************
@@ -10,7 +19,7 @@ ni tampoco animaciones. */
 ===================================================*/
 .header {
     width: 100%;
-    height: 80vh;
+    height: 65vh;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -68,50 +77,23 @@ ni tampoco animaciones. */
 ===================================================*/
 
 /* ex .productos ==> .img-productos*/
+
+
 .img-productos {
     object-fit: cover; 
-    padding: 5%;
-    margin: 5%;
-    width: 80%;
-    height: 80%;
-}
+    max-width: 200px;
+    height: 200px ;
+} 
+ #productos > div > p{
+    font-size: 0.8rem;
+    color: var(--color-prin) !important;
+    text-transform: uppercase;
 
-
-/* .img-productos {
-    object-fit: cover; 
-    width: 100px; 
-    height: 180px;
-}  */
-
-
-.divProductos {
-    padding: 5%;
-    margin: 5%;
-    border: transparent;
-    border-color: grey;
-    box-shadow: 0px 0px 30px grey;
-    border-radius: 10%;
-    width: 100%;
-    height: 100%;
-}
-
-.divProductos:hover {
-    box-shadow: 0px 0px 30px gold;
-}
+ }
 
 /* ex .container ==> #productos: container generaba conflictos, ya que 
 el script iba a insertar imágenes en cualquier etiqueta
 con la clase container*/
-#productos {
-    display: grid;
-    gap: 30px;
-    text-align: center;
-    padding: 10%;
-    grid-template-columns: 2fr 2fr 2fr 2fr;
-    grid-template-rows: 2fr 2fr 2fr;
-    width: 900px;
-    height: 900px;
-}
 
 
 /*===================================================
@@ -186,7 +168,7 @@ con la clase container*/
 
 .trago-card {
     padding: 5px 10px;
-    background-color: #ffffff8f;
+    background-color: #ffffffc9;
     border-radius: 5px !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.529);
     max-width: 98% !important;
@@ -195,8 +177,8 @@ con la clase container*/
 
 
 .bkg-card {
-    background-color: rgb(206, 173, 197);
-    background-image: url("../images/bar2.jpg");
+
+
     background-position: center center;
     background-repeat: no-repeat;
     background-size: conver;
