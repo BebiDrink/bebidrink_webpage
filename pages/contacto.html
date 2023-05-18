@@ -59,23 +59,73 @@
 
     <!---------- Main content ---------->
     <main class="contact-main">
+      <section>
+        <div class="social-media col">
+          <h3 class="center">¡Síguenos!</h3>
+          <ul class="social-media-list">
+  
+  
+            <li>
+              <a href="https://twitter.com/JoseCuervo" target="_blank">
+                <i class="fa-brands fa-twitter smicon smform"></i>
+              </a>
+            </li>
+  
+            <li>
+              <a href="https://www.instagram.com/cocktail_recipes/" target="_blank">
+                <i class="fa-brands fa-instagram smicon smform"></i>
+              </a>
+            </li>
+  
+            <li>
+              <a href="https://www.facebook.com/groups/2788256027984397/" target="_blank">
+                <i class="fa-brands fa-square-facebook smicon smform"></i>
+              </a>
+            </li>
+  
+            <li>
+              <a href="mailto:BebiDrink@proton.me?&subject=Vengo de la página&body=¡Hola!, vengo de su página web"
+                target="_blank">
+                <i class="fa-solid fa-envelope smicon smform"></i>
+              </a>
+            </li>
+  
+  
+          </ul>
+        </div>
+      </section>
         <section class="">
-            <form class="flex flexcol center" id="contact-form" action="submit-form.js" method="post"
+            <form class="flex flexcol center"  id="contact-form" action="../pages/validacion.html" method="post"
                 onsubmit="return validateForm()">
                 <label class="col" for="name">Nombre:</label>
                 <input class="col" type="text" id="name" name="name">
 
+
                 <label class="col" for="email">Email:</label>
                 <input class="col" type="email" id="email" name="email">
 
+                <label for="subject" class="col">Motivo</label>
+                <select name="subject" id="subject" class="col" required>
+                  <option value="delivery-bar">Delivery bar</option>
+                  <option value="delivery-barman">Delivery Barman</option>
+                  <option value="consulta">Consulta</option>
+                  <option value="queja">Queja</option>
+                </select>
+
                 <label class="col" for="message">Mensaje:</label>
-                <textarea class="col" id="message" name="message"></textarea>
+                <textarea class="col message" id="message" name="message"></textarea>
+
+                <span class="alert-name center"></span>
+
 
                 <button class="btn center" type="submit">Enviar</button>
+                
             </form>
 
         </section>
     </main>
+
+    <br><br>
 
     <!---------- title ---------->
 <!-- FOOTER -->

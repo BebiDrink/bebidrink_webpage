@@ -22,7 +22,7 @@ son universales o generales para el proyecto BebiDrink */
     --fondo: hsl(29, 100%, 90%) !important;
     --color-prin: #2d0c3f !important;
     --color-sec: lightgray;
-    --color-ter: #e1dddd;
+    --color-ter: #b491c8;
     --color-acnt: #ff9001;
     --color-txt: #1c0a26;
 }
@@ -57,14 +57,13 @@ h1,
 h2,
 h3,
 h4,
-input {
+input,
+select,
+textarea {
     font-family: var(--fuente-prin);
     color: var(--color-txt);
 }
 
-input {
-    background-color: var(--color-ter);
-}
 
 p,
 h5,
@@ -73,6 +72,58 @@ li,
 tr {
     font-family: var(--fuente-sec);
     color: var(--color-txt);
+}
+
+
+input,
+select,
+textarea {
+    background-color: var(--color-ter) !important;
+    border-radius: 5px !important;
+    margin-bottom: 20px !important;
+}
+
+
+input,
+select {
+    width: 240px;
+    height: 29px;
+    font-size: 16px;
+    padding: 10px !important;
+    cursor: text !important;
+    box-shadow: 0 0 1px 1px #331653ae;
+    border: none;
+    margin: 0.5%;
+}
+
+select {
+    height: 40px;
+    cursor: pointer !important;
+    transition: 0.5s;
+}
+
+select option {
+    width: 100!important;
+    color: var(--color-prin);
+    font-size: small;
+    transition: 0.5s;
+}
+
+label {
+    color: var(--color-acnt-);
+    font-family: var(--fuente-prin);
+    width: 240px;
+}
+
+
+a,
+button {
+    cursor: pointer !important;
+    font-family: var(--fuente-ter);
+    margin: 0.5% !important;
+    color: black;
+    border-radius: 5px !important;
+    font-size: small;
 }
 
 span {
@@ -86,27 +137,8 @@ span:hover {
     transition: all ease-in-out 300ms;
 }
 
-input {
-    width: 240px;
-    height: 29px;
-    font-size: 16px;
-    padding: 10px !important;
-    cursor: text !important;
-    border-radius: 5px !important;
-    box-shadow: 0 0 1px 1px #331653ae;
-    border: none;
-    margin: 0.5%;
-}
 
-a,
-button {
-    cursor: pointer !important;
-    font-family: var(--fuente-ter);
-    margin: 0.5% !important;
-    color: black;
-    border-radius: 5px !important;
-    font-size: small;
-}
+
 
 /* Estilos adicionales para pantallas mayores a 920px */
 
@@ -700,10 +732,17 @@ footer {
 ******************* MEDIA QUERIES *****************
 **************************************************
 ===================================================*/
+@media only screen and (max-width: 412px){
+    
+    #buscar {
+        margin-top: 10px !important;
+    }
+}
+
 
 /* TAMAÑOS GRID COLUMNS RESPONSIVE (COLUMNAS PARA ABARCAR) */
 /* Dispositivos de hasta de 600px (mobiles y tablets) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 601px) {
 
     .slider {
         width: 100%;
@@ -828,6 +867,7 @@ footer {
     .m-12 {
         grid-column: span 12 / span 12;
     }
+
 }
 
 /* Dispositivos de mas de 900px (Desktops y +) */

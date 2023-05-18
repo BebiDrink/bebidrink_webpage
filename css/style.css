@@ -5,10 +5,10 @@ ni tampoco animaciones. */
 :root {
     /* Colores*/
     --fondo: hsl(29, 100%, 90%) !important;
-    --color-prin: #2d0c3f !important;
+    --color-prin: rgb(45, 12, 63) !important;
     --color-sec: lightgray;
     --color-ter: #e1dddd;
-    --color-acnt: #ff9001;
+    --color-acnt: rgb(255, 145, 0);
     --color-txt: #1c0a26 ;
 }
 
@@ -188,7 +188,11 @@ con la clase container*/
 
 .recipes-main,
 .contact-main {
-    min-height: 100vh;
+    min-height: 120vh;
+}
+
+.consulta {
+    margin-bottom: 4px !important;
 }
 
 /*===================================================
@@ -196,13 +200,52 @@ con la clase container*/
 **************** PÁGINA FORMULARIO *****************
 ****************************************************
 ===================================================*/
+.alert-name {
+    margin-top: 40px;
+    width: 70%;
+    background-color: rgba(92, 21, 122, 0.142) !important;
+    transition: 0.5;
+}
 
+.alert-name h5 {
+    color: var(--color-prin);
+}
 
+.message {
+    width:250px !important;
+    height: 250px;
+}
 
+.smform {
+    background-color: #ff9001;
+    color: var(--color-prin);
+    padding: 8px;
+    border-radius: 100%;
+    transition: 0.3s;
+}
 
+.smform:hover {
+    box-shadow:0 0 0 5px var(--color-acnt);
+    transition: 0.3s;
+}
 
 /*===================================================
 ****************************************************
 **************** PÁGINA VALIDACIÓN *****************
 ****************************************************
 ===================================================*/
+.body-validation {
+    margin:0 ;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.body-validation h1, h2, h3, h4, h5, h6 {
+    color: var(--color-prin);
+}
+
+.validation-icon {
+    font-size: 80px;
+    color: var(--color-acnt);
+}
