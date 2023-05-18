@@ -46,7 +46,7 @@ const request = async (url) => {
   window.addEventListener("load", (event) => {
     console.log("Pagina arriba");
     const datos = request("./../data/nosotros.json");
-    setInterval(cambiarImagenes, 5000); 
+    setInterval(cambiarImagenes, 6000); 
   
   });
   
