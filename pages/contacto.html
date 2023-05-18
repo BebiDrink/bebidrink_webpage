@@ -32,19 +32,25 @@
     <nav class="nav nav-container">
         <!-- logo -->
         <div class="nav-logo">
-            <img class="logo" src="../images/bbdrink.jpeg" alt="" />
+          <a href="../index.html"><img class="logo" src="../images/bbdrink.png" alt="logo" /></a>
         </div>
+      
+        <!-- hamburger icon -->
+        <div class="hamburger-icon">
+          <i class="fas fa-bars"></i>
+        </div>
+      
         <!-- links -->
         <div class="nav-links">
-            <ul class="links flex">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./nosotros.html">Nosotros</a></li>
-                <li><a href="./productos.html">Productos</a></li>
-                <li><a href="./recetas.html">Recetas</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-            </ul>
+          <ul class="links flex">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./nosotros.html">Nosotros</a></li>
+            <li><a href="./productos.html">Productos</a></li>
+            <li><a href="./recetas.html">Recetas</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+          </ul>
         </div>
-    </nav>
+      </nav>
 
     <!---------- Header section ---------->
     <header class="container center">
@@ -52,7 +58,7 @@
     </header>
 
     <!---------- Main content ---------->
-    <main class="">
+    <main class="contact-main">
         <section class="">
             <form class="flex flexcol center" id="contact-form" action="submit-form.js" method="post"
                 onsubmit="return validateForm()">
@@ -72,38 +78,80 @@
     </main>
 
     <!---------- title ---------->
-    <footer class="">
-    </footer>
+<!-- FOOTER -->
+<footer class="footer-container">
+    <div class="footer-info grid">
+      <div class="social-media col">
+        <h3 class="center">¡Síguenos!</h3>
+        <ul class="social-media-list">
+
+
+          <li>
+            <a href="https://twitter.com/JoseCuervo" target="_blank">
+              <i class="fa-brands fa-twitter smicon"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/cocktail_recipes/" target="_blank">
+              <i class="fa-brands fa-instagram smicon"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.facebook.com/groups/2788256027984397/" target="_blank">
+              <i class="fa-brands fa-square-facebook smicon"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="mailto:BebiDrink@proton.me?&subject=Vengo de la página&body=¡Hola!, vengo de su página web"
+              target="_blank">
+              <i class="fa-solid fa-envelope smicon"></i>
+            </a>
+          </li>
+
+
+        </ul>
+      </div>
+
+      <div class="contact col">
+        <a class="btn footer-btn" href="./contacto.html">Contactanos</a>
+      </div>
+      <div class="ubication col">
+        <div class="direction">
+          <h3>Dirección</h3>
+          <h6>Libertadores 123, Ciudad Autónoma de Buenos Aires.</h6>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.900604090059!2d-58.38163968518904!3d-34.60373846777243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca61f341713d%3A0xe8a36458b159e604!2sBuenos%20Aires%2C%20Argentina!5e0!3m2!1sen!2sus!4v1621880630035!5m2!1sen!2sus"
+          width="200" height="150" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <div class="footer-credits grid">
+      <h4 class="col">
+        Autores: <br><br> G. Rincón & J. Esparza<br><br>
+        <a href="https://github.com/BebiDrink/bebidrink_webpage" target="_blank" class="col repo"><i
+            class="fa-brands fa-square-github"></i></a><br><br>
+        </h4>
+      <h3 class="col center">Powered By:</h3>
+      <div class="col flex flexrow-wrap center powered">
+        <p>GitHub Pages</p>
+        <p>Ajax</p>
+        <p>TheCocktailDB</p>
+        <p>Vanta.js</p>
+        <p>Api-ninjas</p>
+        <p>GMaps-api</p>
+        <p>GoogleFonts</p>
+        <p>FontsAwesome</p>
+      </div>
+    </div>
+  </footer>
 
     <!--===========SCRIPTS=============-->
-    <script>
-        function validateForm() {
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            var message = document.getElementById("message").value;
-
-            if (name == "" || email == "" || message == "") {
-                alert("Por favor, rellene todos los campos requeridos.");
-                return false;
-            }
-
-            if (!validateEmail(email)) {
-                alert("Por favor, ingrese una dirección de correo electrónico válida.");
-                return false;
-            }
-
-            return true;
-        }
-
-        function validateEmail(email) {
-            var re = /\S+@\S+\.\S+/;
-            return re.test(email);
-        }
-
-    </script>
-    <script src="" type="text/javascript"></script>
-    <script src="" type="text/javascript"></script>
-    <script src="" type="text/javascript"></script>
+    <script src="../js/nav.js" type="text/javascript"></script>
+    <script src="../js/form.js" type="text/javascript"></script>
 </body>
 
 </html>

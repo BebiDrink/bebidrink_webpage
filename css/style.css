@@ -186,6 +186,11 @@ con la clase container*/
     background-attachment: fixed;
 }
 
+.recipes-main,
+.contact-main {
+    min-height: 100vh;
+}
+
 /*===================================================
 ****************************************************
 **************** PÁGINA FORMULARIO *****************

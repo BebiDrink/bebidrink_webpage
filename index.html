@@ -1,137 +1,199 @@
 <!DOCTYPE html>
 <html lang="es">
-  <!--===========HEAD=============-->
+<!--===========HEAD=============-->
 
-  <head>
-    <!---------- metas ---------->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Descripción de la página bebidrink" />
-    <meta name="keywords" content="palabras clave separadas por coma" />
-    <meta name="author" content="autores separados por comas" />
+<head>
+  <!---------- metas ---------->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Descripción de la página bebidrink" />
+  <meta name="keywords" content="palabras clave separadas por coma" />
+  <meta name="author" content="autores separados por comas" />
 
-    <!---------- Favicon ---------->
-    <link rel="shortcut icon" type="image/png" href="./images/bbdrink.jpeg">
-    <!---------- links ---------->
-    <link rel="stylesheet" href="./css/personalized.css" />
-    <!-- estilos universales para el proyecto -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <!-- estilos de cada página -->
+  <!---------- Favicon ---------->
+  <link rel="shortcut icon" type="image/png" href="./images/bbdrink.jpeg" />
+  <!---------- links ---------->
+  <link rel="stylesheet" href="./css/personalized.css" />
+  <!-- estilos universales para el proyecto -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- estilos de cada página -->
 
-    <!---------- CDN'S -------->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <!-- vanta.js -->
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
-    <!-- vanta.js -->
-    <script
-      src="https://kit.fontawesome.com/cac8e89f4d.js"
-      crossorigin="anonymous"
-    ></script>
+  <!---------- CDN'S -------->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <!-- vanta.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+  <!-- vanta.js -->
+  <script src="https://kit.fontawesome.com/cac8e89f4d.js" crossorigin="anonymous"></script>
 
-    <!---------- title ---------->
-    <title>BebiDrink Home</title>
-  </head>
+  <!---------- title ---------->
+  <title>BebiDrink Home</title>
+</head>
 
-  <!--===========BODY=============-->
+<!--===========BODY=============-->
 
-  <body class="">
-    <!---------- Navigation ---------->
-    <nav class="nav nav-container">
-      <!-- logo -->
-      <div class="nav-logo">
-        <img class="logo" src="./images/bbdrink.jpeg" alt="" />
-      </div>
-      <!-- links -->
-      <div class="nav-links">
-        <ul class="links flex">
-          <li><a href="./index.html">Inicio</a></li>
-          <li><a href="./pages/nosotros.html">Nosotros</a></li>
-          <li><a href="./pages/productos.html">Productos</a></li>
-          <li><a href="./pages/recetas.html">Recetas</a></li>
-          <li><a href="./pages/contacto.html">Contacto</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <!---------- Header section ---------->
-    <header id="header" class="container center header bkg-anim">
-      <hgroup class="hgroup">
-        <h1 class="header-title h">BebiDrink</h1>
-        <h5 class="header-subtitle h">Delivery Bar</h5>
-      </hgroup>
-    </header>
-
-    <!---------- Main content ---------->
-    <main class="main-container">
-      <section class="container grid">
-        <article class="col s-12 m-6 l-6 center container">
-          <h4><i class="fa-solid fa-gauge-high"></i> CALIDAD</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
-            necessitatibus, magnam facere nulla in labore atque sed est tempora
-            pariatur expedita, error perspiciatis repellat saepe quo veniam nemo
-            maxime aliquid!
-          </p>
-          <br>
-        </article>
-        <article class="col s-12 m-6 l-6 center container">
-            <h4><i class="fa-solid fa-hand-holding-dollar"></i> PRECIO</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
-              necessitatibus, magnam facere nulla in labore atque sed est tempora
-              pariatur expedita, error perspiciatis repellat saepe quo veniam nemo
-              maxime aliquid!
-            </p>
-            <br>
-        </article>
-        <article class="col s-12 m-12 l-12 center container">
-            <h4><i class="fa-solid fa-martini-glass"></i> SERVICIO</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
-              necessitatibus, magnam facere nulla in labore atque sed est tempora
-              pariatur expedita, error perspiciatis repellat saepe quo veniam nemo
-              maxime aliquid!
-            </p>
-            <br>
-        </article>
-      </section>
-    </main>
-
-    <!---------- title ---------->
-    <footer class=""></footer>
-
-    <!-- Modal -->
-    <div id="modal" class="modal">
-      <form class="modal-content">
-        <div class="center">
-          <h3>Debes ser mayor de edad para ingresar</h3>
-        </div>
-        <label for="fechaNacimiento" class="modal--title"
-          >Fecha de nacimiento:</label
-        >
-        <input
-          class="modal--input"
-          type="date"
-          id="fechaNacimiento"
-          name="fechaNacimiento"
-          min="1900-01-01"
-          max="2023-12-31"
-          required
-        />
-        <button class="modal--button btn" id="ingresar" type="submit">
-          Entrar
-        </button>
-
-        <div class="center">
-          <h6>SE RESPONSABLE: SI TOMAS, NO MANEJES</h6>
-        </div>
-      </form>
+<body class="">
+  <!---------- Navigation ---------->
+  <nav class="nav nav-container">
+    <!-- logo -->
+    <div class="nav-logo">
+      <a href="./index.html"><img class="logo" src="../images/bbdrink.png" alt="logo" /></a>
     </div>
 
-    <!--===========SCRIPTS=============-->
-    <script src="./js/modal.js" type="text/javascript"></script>
-    <!-- Validador de edad -->
-    <script src="./js/animations.js" type="text/javascript"></script>
-    <!-- Fondo animado del header -->
-  </body>
+    <!-- hamburger icon -->
+    <div class="hamburger-icon">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- links -->
+    <div class="nav-links">
+      <ul class="links flex">
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./pages/nosotros.html">Nosotros</a></li>
+        <li><a href="./pages/productos.html">Productos</a></li>
+        <li><a href="./pages/recetas.html">Recetas</a></li>
+        <li><a href="./pages/contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!---------- Header section ---------->
+  <header id="header" class="container center header bkg-anim">
+    <hgroup class="hgroup">
+      <h1 class="header-title h">BebiDrink</h1>
+      <h5 class="header-subtitle h">Delivery Bar</h5>
+    </hgroup>
+  </header>
+
+  <!---------- Main content ---------->
+  <main class="main-container">
+    <section class="container grid">
+      <article class="col s-12 m-6 l-6 center container">
+        <h4><i class="fa-solid fa-gauge-high"></i> CALIDAD</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
+          necessitatibus, magnam facere nulla in labore atque sed est tempora
+          pariatur expedita, error perspiciatis repellat saepe quo veniam nemo
+          maxime aliquid!
+        </p>
+        <br />
+      </article>
+      <article class="col s-12 m-6 l-6 center container">
+        <h4><i class="fa-solid fa-hand-holding-dollar"></i> PRECIO</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
+          necessitatibus, magnam facere nulla in labore atque sed est tempora
+          pariatur expedita, error perspiciatis repellat saepe quo veniam nemo
+          maxime aliquid!
+        </p>
+        <br />
+      </article>
+      <article class="col s-12 m-12 l-12 center container">
+        <h4><i class="fa-solid fa-martini-glass"></i> SERVICIO</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
+          necessitatibus, magnam facere nulla in labore atque sed est tempora
+          pariatur expedita, error perspiciatis repellat saepe quo veniam nemo
+          maxime aliquid!
+        </p>
+        <br />
+      </article>
+    </section>
+  </main>
+
+  <!---------- Footer---------->
+  <footer class="footer-container">
+    <div class="footer-info grid">
+      <div class="social-media col">
+        <h3 class="center">¡Síguenos!</h3>
+        <ul class="social-media-list">
+
+
+          <li>
+            <a href="https://twitter.com/JoseCuervo" target="_blank">
+              <i class="fa-brands fa-twitter smicon"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/cocktail_recipes/" target="_blank">
+              <i class="fa-brands fa-instagram smicon"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.facebook.com/groups/2788256027984397/" target="_blank">
+              <i class="fa-brands fa-square-facebook smicon"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="mailto:BebiDrink@proton.me?&subject=Vengo de la página&body=¡Hola!, vengo de su página web"
+              target="_blank">
+              <i class="fa-solid fa-envelope smicon"></i>
+            </a>
+          </li>
+
+
+        </ul>
+      </div>
+
+      <div class="contact col">
+        <a class="btn footer-btn" href="./pages/contacto.html">Contactanos</a>
+      </div>
+      <div class="ubication col">
+        <div class="direction">
+          <h3>Dirección</h3>
+          <h6>Libertadores 123, Ciudad Autónoma de Buenos Aires.</h6>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.900604090059!2d-58.38163968518904!3d-34.60373846777243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca61f341713d%3A0xe8a36458b159e604!2sBuenos%20Aires%2C%20Argentina!5e0!3m2!1sen!2sus!4v1621880630035!5m2!1sen!2sus"
+          width="200" height="150" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <div class="footer-credits grid">
+      <h4 class="col">
+        Autores: <br><br> G. Rincón & J. Esparza<br><br>
+        <a href="https://github.com/BebiDrink/bebidrink_webpage" target="_blank" class="col repo"><i
+            class="fa-brands fa-square-github"></i></a><br><br>
+        </h4>
+      <h3 class="col center">Powered By:</h3>
+      <div class="col flex flexrow-wrap center powered">
+        <p>GitHub Pages</p>
+        <p>Ajax</p>
+        <p>TheCocktailDB</p>
+        <p>Vanta.js</p>
+        <p>Api-ninjas</p>
+        <p>GMaps-api</p>
+        <p>GoogleFonts</p>
+        <p>FontsAwesome</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <form class="modal-content">
+      <div class="center">
+        <h3>Debes ser mayor de edad para ingresar</h3>
+      </div>
+      <label for="fechaNacimiento" class="modal--title">Fecha de nacimiento:</label>
+      <input class="modal--input" type="date" id="fechaNacimiento" name="fechaNacimiento" min="1900-01-01"
+        max="2023-12-31" required />
+      <button class="modal--button btn" id="ingresar" type="submit">
+        Entrar
+      </button>
+
+      <div class="center">
+        <h6>SE RESPONSABLE: SI TOMAS, NO MANEJES</h6>
+      </div>
+    </form>
+  </div>
+
+  <!--===========SCRIPTS=============-->
+  <script src="./js/modal.js" type="text/javascript"></script>
+  <script src="./js/animations.js" type="text/javascript"></script>
+  <script src="./js/nav.js"></script>
+</body>
+
 </html>

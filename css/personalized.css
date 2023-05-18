@@ -78,6 +78,7 @@ tr {
 span {
     background-color: var(--color-acnt);
     color: var(--color-prin);
+    border-radius: 5px !important;
 }
 
 span:hover {
@@ -97,15 +98,6 @@ input {
     margin: 0.5%;
 }
 
-/* .v100 {
-    height: 70vh;
-    background-color: rgb(220, 111, 1);
-    background-image: url("../images/bar.jpg");
-    background-position:center;
-    background-size: cover;
-    background-blend-mode:difference;
-} */
-
 a,
 button {
     cursor: pointer !important;
@@ -116,7 +108,11 @@ button {
     font-size: small;
 }
 
+/* Estilos adicionales para pantallas mayores a 920px */
+
 nav {
+    justify-content: center;
+    display: inline-block;
     max-width: 100% !important;
     box-shadow: 5px 0 10px 2px rgba(0, 0, 0, 0.522);
 }
@@ -143,26 +139,47 @@ nav {
 
 .nav-links {
     width: 45%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    transition: 0.5s;
 }
 
 .links {
+    transition: 0.5s;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     justify-content: center;
     align-items: center;
 }
 
 .links a {
+    line-height: 1;
     color: #d1b1ce !important;
     padding: 10px;
     text-transform: uppercase;
+    transition: all 0.5s;
 }
 
 .links a:hover {
-    background-color: rgba(255, 255, 255, 0.155);
+    background-color: #d1b1ce48;
     color: var(--color-acnt) !important;
+    box-shadow: 0 0.5px 0px var(--color-acnt);
+    transition: all 0.5s;
 }
 
+/* Estilos para el menú hamburguesa en pantalla móvil */
+.hamburger-open .nav-links {
+    right: 0;
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+.hamburger-icon i {
+    color: var(--color-acnt);
+}
 
 /* ==========================================
 **************** CONTENEDORES ***************
@@ -506,12 +523,10 @@ VER LOS SELECTORES GRID DEL FINAL EN MEDIAQUERIES */
     color: white;
     margin: 10px 0;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 
-
-.accordion-content {
-}
 
 .cabTabla h3 {
     color: white;
@@ -520,18 +535,23 @@ VER LOS SELECTORES GRID DEL FINAL EN MEDIAQUERIES */
 
 .cabTabla i {
     color: var(--color-acnt);
+    transition: 0.5s;
 }
 
 .cabTabla div {
+    transition: 0.5s;
     margin-left: 20px;
 }
 
 
 
-/*  TABLA DE CATÁLOGO */
+/*===================================================
+****************** TABLA DEL CATALOGO ******************
+===================================================*/
 
 table {
     width: 500px;
+    transition: 0.5s;
 }
 
 
@@ -539,6 +559,7 @@ table,
 th,
 td {
     border-collapse: collapse;
+    transition: 0.5s;
 }
 
 
@@ -547,6 +568,7 @@ th {
     text-transform: uppercase;
     padding: 10px 0px;
     background-color: var(--color-acnt);
+    transition: 0.5s;
 
 }
 
@@ -556,6 +578,7 @@ table td,
 table th {
     border: 1px solid #44245942;
     padding: 8px;
+    transition: 0.5s;
 }
 
 table tr:nth-child(even) {
@@ -564,6 +587,7 @@ table tr:nth-child(even) {
 
 table tr:hover {
     background-color: var(--color-acnt);
+    transition: 0.3s;
 }
 
 table th {
@@ -572,7 +596,104 @@ table th {
     text-align: center;
     background-color: var(--color-txt);
     color: white;
+    transition: 0.5s;
 }
+
+
+/*===================================================
+****************** FOOTER******************
+===================================================*/
+
+footer {
+    background-color: var(--color-acnt);
+    padding: 20px;
+}
+
+/*   .footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  } */
+
+.footer-credits {
+    text-align: center;
+    font-size: 13px;
+}
+
+.repo {
+    font-size: 25px;
+}
+
+.repo i:hover {
+    box-shadow: 0 0 0 10px var(--color-prin);
+    background-color: var(--color-txt);
+    border-radius: 100%;
+    color: var(--color-acnt);
+    transition: 0.3s;
+}
+
+.social-media-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media-list li {
+    margin: 0 10px;
+}
+
+.smicon {
+    font-size: 30px;
+    color: var(--color-txt);
+}
+
+.smicon:hover {
+    transform: rotate(10deg);
+    transition: 0.5s;
+}
+
+
+
+.contact {
+    /* Estilos para el enlace de contacto */
+}
+
+.footer-btn {
+    background-color: var(--color-prin) !important;
+}
+
+.footer-btn:hover {
+    background-color: var(--color-txt) !important;
+}
+
+.ubication {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.ubication .direction {
+    width: 80%;
+    text-align: center;
+
+}
+
+.ubication iframe {
+    border-radius: 15px;
+}
+
+.powered {
+    max-width: 100%;
+}
+.powered p{
+    margin: 5px;
+}
+
+
 
 /*===================================================
 **************************************************
@@ -583,7 +704,6 @@ table th {
 /* TAMAÑOS GRID COLUMNS RESPONSIVE (COLUMNAS PARA ABARCAR) */
 /* Dispositivos de hasta de 600px (mobiles y tablets) */
 @media only screen and (max-width: 600px) {
-
 
     .slider {
         width: 100%;
@@ -770,5 +890,106 @@ table th {
 
     .l-12 {
         grid-column: span 12 / span 12;
+    }
+}
+
+@media (max-width: 920px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav-logo {
+        margin-bottom: 20px;
+        z-index: 99999;
+    }
+
+    .hamburger-icon {
+        position: absolute;
+        background-color: var(--color-prin);
+        border-radius: 5px;
+        top: 50px;
+        right: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .hamburger-icon i {
+        color: var(--color-acnt);
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 24px;
+        position: fixed;
+        z-index: 99999;
+    }
+
+    .hamburger-icon:hover,
+    .hamburger-icon i:hover {
+        background-color: var(--color-prin);
+        color: var(--color-acnt);
+    }
+
+    .hamburger-icon:focus {
+        color: var(--color-acnt);
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        width: 80%;
+        right: -100%;
+        height: 100%;
+        background-color: var(--color-txt);
+        z-index: 9999;
+        transition: 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        box-shadow: inset 1px 0 5px 0px #2d0c3f;
+    }
+
+    .nav-links.open {
+        right: 0;
+    }
+
+    .links {
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 550px;
+        text-align: center;
+    }
+
+    .links li {
+        margin: 10px 0;
+        display: flex;
+        width: 100%;
+        border-bottom: 3px solid rgba(255, 255, 255, 0.085);
+    }
+
+    .links a {
+        display: block;
+        width: 100%;
+        line-height: 100%;
+        margin: 10px 0;
+        font-size: 18px;
+        color: #d1b1ce !important;
+        padding: 10px;
+        text-transform: uppercase;
+        border-radius: 0px;
+        transition: all 0.5s;
+    }
+
+    .links a:hover {
+        background-color: #d1b1ce48;
+        color: var(--color-acnt) !important;
+        box-shadow: 0 0.5px 0px var(--color-acnt);
+        transition: all 0.5s;
     }
 }

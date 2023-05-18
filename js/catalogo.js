@@ -74,3 +74,27 @@ window.addEventListener("load", (event) => {
   console.log("Pagina arriba");
   const datos = request("./../data/catalogo.json");
 });
+
+
+
+// Obtener todos los encabezados y contenidos del acordeón
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+const accordionContents = document.querySelectorAll('.accordion-content');
+const accordionIcons = document.querySelectorAll('.accordion-icons');
+const plusIcons = document.querySelectorAll('.fa-circle-plus');
+const xmarkIcons = document.querySelectorAll('.fa-circle-xmark');
+
+// Función para expandir o contraer el contenido del acordeón
+function toggleAccordion() {
+  const accordionContent = this.nextElementSibling;
+  const accordionIcon = this.querySelector('.accordion-icons i');
+
+  accordionContent.classList.toggle('collapsed');
+  accordionIcon.classList.toggle('ocultar');
+  accordionIcon.nextElementSibling.classList.toggle('ocultar');
+}
+
+// Agregar el evento click a cada encabezado del acordeón
+accordionHeaders.forEach((header) => {
+  header.addEventListener('click', toggleAccordion);
+});
