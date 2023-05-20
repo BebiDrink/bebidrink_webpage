@@ -12,18 +12,25 @@ function cerrarModal() {
 
 // Alerta, menor de edad
 function noEsMayor() {
-    document.body.className = "alerta-m-image";
+    const target = document.body;
     const mensaje = `
-        <section class='alerta-m-container'>
-            <h1 class='alerta-m-title'>
-                LO SENTIMOS, 
-                ESTE SITIO ES PARA 
-                MAYORES DE EDAD
-            <h1>
-        </section>
+
+    <main class="ban-main">
+        <div class="textCont">
+            <section class='alerta-m-container'>
+                <h1 class='alerta-m-title'>
+                    LO SENTIMOS, 
+                    NUESTRO SITIO ES PARA 
+                    MAYORES DE EDAD
+                <h1>
+            </section>
+        </div>
+   </main> 
+
+
     `;
 
-    document.body.innerHTML = mensaje
+    target.innerHTML = mensaje
     mostrarModal()
 }
 
