@@ -4,132 +4,133 @@
 <!--===========HEAD=============-->
 
 <head>
-    <!---------- metas ---------->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descripción de la página bebidrink">
-    <meta name="keywords" content="palabras clave separadas por coma">
-    <meta name="author" content="autores separados por comas">
+  <!---------- metas ---------->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Sitio web de cócteles donde los usuarios pueden buscar tragos, conocer recetas y obtener información sobre productos relacionados." />
+  <meta name="keywords" content="cócteles, tragos, recetas, productos, bebidas, cóctel, sitio web" />
+  <meta name="author" content="Gabriela Rincón, Juan Esparza" />
 
-    <!---------- Favicon ---------->
-    <link rel="shortcut icon" type="image/png" href="../images/bbdrink.jpeg">
+  <!---------- Favicon ---------->
+  <link rel="shortcut icon" type="image/png" href="../images/bbdrink.jpeg">
 
-    <!---------- CDN'S -------->
-    <script src="https://kit.fontawesome.com/cac8e89f4d.js" crossorigin="anonymous"></script>
+  <!---------- CDN'S -------->
+  <script src="https://kit.fontawesome.com/cac8e89f4d.js" crossorigin="anonymous"></script>
 
-    <!---------- links ---------->
-    <link rel="stylesheet" href="../css/personalized.css">
-    <link rel="stylesheet" href="../css/style.css">
+  <!---------- links ---------->
+  <link rel="stylesheet" href="../css/personalized.css">
+  <link rel="stylesheet" href="../css/style.css">
 
-    <!---------- title ---------->
-    <title>Contacto</title>
+  <!---------- title ---------->
+  <title>Contacto</title>
 </head>
 
 <!--===========BODY=============-->
 
 <body>
-    <!---------- Navigation ---------->
-    <nav class="nav nav-container">
-        <!-- logo -->
-        <div class="nav-logo">
-          <a href="../index.html"><img class="logo" src="../images/bbdrink.png" alt="logo" /></a>
-        </div>
-      
-        <!-- hamburger icon -->
-        <div class="hamburger-icon">
-          <i class="fas fa-bars"></i>
-        </div>
-      
-        <!-- links -->
-        <div class="nav-links">
-          <ul class="links flex">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./nosotros.html">Nosotros</a></li>
-            <li><a href="./productos.html">Productos</a></li>
-            <li><a href="./recetas.html">Recetas</a></li>
-            <li><a href="./contacto.html">Contacto</a></li>
-          </ul>
-        </div>
-      </nav>
+  <!---------- Navigation ---------->
+  <nav class="nav nav-container">
+    <!-- logo -->
+    <div class="nav-logo">
+      <a href="../index.html"><img class="logo" src="../images/bbdrink.png" alt="logo" /></a>
+    </div>
 
-    <!---------- Header section ---------->
-    <header class="container center">
-        <h1>CONTACTO</h1>
-    </header>
+    <!-- hamburger icon -->
+    <div class="hamburger-icon">
+      <i class="fas fa-bars"></i>
+    </div>
 
-    <!---------- Main content ---------->
-    <main class="contact-main">
-      <section>
-        <div class="social-media col">
-          <h3 class="center">¡Síguenos!</h3>
-          <ul class="social-media-list">
-  
-  
-            <li>
-              <a href="https://twitter.com/JoseCuervo" target="_blank">
-                <i class="fa-brands fa-twitter smicon smform"></i>
-              </a>
-            </li>
-  
-            <li>
-              <a href="https://www.instagram.com/cocktail_recipes/" target="_blank">
-                <i class="fa-brands fa-instagram smicon smform"></i>
-              </a>
-            </li>
-  
-            <li>
-              <a href="https://www.facebook.com/groups/2788256027984397/" target="_blank">
-                <i class="fa-brands fa-square-facebook smicon smform"></i>
-              </a>
-            </li>
-  
-            <li>
-              <a href="mailto:BebiDrink@proton.me?&subject=Vengo de la página&body=¡Hola!, vengo de su página web"
-                target="_blank">
-                <i class="fa-solid fa-envelope smicon smform"></i>
-              </a>
-            </li>
-  
-  
-          </ul>
-        </div>
-      </section>
-        <section class="">
-            <form class="flex flexcol center"  id="contact-form" action="../pages/validacion.html" method="post"
-                onsubmit="return validateForm()">
-                <label class="col" for="name">Nombre:</label>
-                <input class="col" type="text" id="name" name="name">
+    <!-- links -->
+    <div class="nav-links">
+      <ul class="links flex">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="./nosotros.html">Nosotros</a></li>
+        <li><a href="./productos.html">Productos</a></li>
+        <li><a href="./recetas.html">Recetas</a></li>
+        <li><a href="./contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!---------- Header section ---------->
+  <header class="container center">
+    <h1>CONTACTO</h1>
+  </header>
+
+  <!---------- Main content ---------->
+  <main class="contact-main">
+    <section>
+      <div class="social-media col">
+        <h3 class="center">¡Síguenos!</h3>
+        <ul class="social-media-list">
 
 
-                <label class="col" for="email">Email:</label>
-                <input class="col" type="email" id="email" name="email">
+          <li>
+            <a href="https://twitter.com/JoseCuervo" target="_blank">
+              <i class="fa-brands fa-twitter smicon smform"></i>
+            </a>
+          </li>
 
-                <label for="subject" class="col">Motivo</label>
-                <select name="subject" id="subject" class="col" required>
-                  <option value="delivery-bar">Delivery bar</option>
-                  <option value="delivery-barman">Delivery Barman</option>
-                  <option value="consulta">Consulta</option>
-                  <option value="queja">Queja</option>
-                </select>
+          <li>
+            <a href="https://www.instagram.com/cocktail_recipes/" target="_blank">
+              <i class="fa-brands fa-instagram smicon smform"></i>
+            </a>
+          </li>
 
-                <label class="col" for="message">Mensaje:</label>
-                <textarea class="col message" id="message" name="message"></textarea>
+          <li>
+            <a href="https://www.facebook.com/groups/2788256027984397/" target="_blank">
+              <i class="fa-brands fa-square-facebook smicon smform"></i>
+            </a>
+          </li>
 
-                <span class="alert-name center"></span>
+          <li>
+            <a href="mailto:BebiDrink@proton.me?&subject=Vengo de la página&body=¡Hola!, vengo de su página web"
+              target="_blank">
+              <i class="fa-solid fa-envelope smicon smform"></i>
+            </a>
+          </li>
 
 
-                <button class="btn center" type="submit">Enviar</button>
-                
-            </form>
+        </ul>
+      </div>
+    </section>
+    <section class="">
+      <form class="flex flexcol center" id="contact-form" action="../pages/validacion.html" method="post"
+        onsubmit="return validateForm()">
+        <label class="col" for="name">Nombre:</label>
+        <input class="col" type="text" id="name" name="name">
 
-        </section>
-    </main>
 
-    <br><br>
+        <label class="col" for="email">Email:</label>
+        <input class="col" type="email" id="email" name="email">
 
-    <!---------- title ---------->
-<!-- FOOTER -->
-<footer class="footer-container">
+        <label for="subject" class="col">Motivo</label>
+        <select name="subject" id="subject" class="col" required>
+          <option value="delivery-bar">Delivery bar</option>
+          <option value="delivery-barman">Delivery Barman</option>
+          <option value="consulta">Consulta</option>
+          <option value="queja">Queja</option>
+        </select>
+
+        <label class="col" for="message">Mensaje:</label>
+        <textarea class="col message" id="message" name="message"></textarea>
+
+        <span class="alert-name center"></span>
+
+
+        <button class="btn center" type="submit">Enviar</button>
+
+      </form>
+
+    </section>
+  </main>
+
+  <br><br>
+
+  <!---------- title ---------->
+  <!-- FOOTER -->
+  <footer class="footer-container">
     <div class="footer-info grid">
       <div class="social-media col">
         <h3 class="center">¡Síguenos!</h3>
@@ -184,7 +185,7 @@
         Autores: <br><br> G. Rincón & J. Esparza<br><br>
         <a href="https://github.com/BebiDrink/bebidrink_webpage" target="_blank" class="col repo"><i
             class="fa-brands fa-square-github"></i></a><br><br>
-        </h4>
+      </h4>
       <h3 class="col center">Powered By:</h3>
       <div class="col flex flexrow-wrap center powered">
         <p>GitHub Pages</p>
@@ -199,9 +200,29 @@
     </div>
   </footer>
 
-    <!--===========SCRIPTS=============-->
-    <script src="../js/nav.js" type="text/javascript"></script>
-    <script src="../js/form.js" type="text/javascript"></script>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <form class="modal-content">
+        <div class="center">
+          <h3>Debes ser mayor de edad para ingresar</h3>
+        </div>
+        <label for="fechaNacimiento" class="modal--title">Fecha de nacimiento:</label>
+        <input class="modal--input" type="date" id="fechaNacimiento" name="fechaNacimiento" min="1900-01-01"
+          max="2023-12-31" required />
+        <button class="modal--button btn" id="ingresar" type="submit">
+          Entrar
+        </button>
+  
+        <div class="center">
+          <h6>SE RESPONSABLE: SI TOMAS, NO MANEJES</h6>
+        </div>
+      </form>
+    </div>
+
+  <!--===========SCRIPTS=============-->
+  <script src="../js/modal.js" type="text/javascript"></script>
+  <script src="../js/nav.js" type="text/javascript"></script>
+  <script src="../js/form.js" type="text/javascript"></script>
 </body>
 
 </html>

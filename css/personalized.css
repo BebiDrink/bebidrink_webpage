@@ -241,12 +241,14 @@ nav {
     width: 100% !important;
     height: 90% !important;
     overflow: hidden;
+    transition: 0.5s;
 }
 
 .card:hover {
-    box-shadow: 0 0 1px 2px var(--color-acnt);
+    box-shadow: 0 0 0px 5px #ffffff,
+    0 0 0 2px #ff9001 inset;
     background-color: white;
-    transition: all ease-in-out 300ms;
+    transition: 0.5s;
 }
 
 /* ==========================================
@@ -444,7 +446,7 @@ VER LOS SELECTORES GRID DEL FINAL EN MEDIAQUERIES */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 999999;
     left: 0;
     top: 0;
     width: 100%;
@@ -500,24 +502,36 @@ VER LOS SELECTORES GRID DEL FINAL EN MEDIAQUERIES */
     cursor: pointer;
 }
 
-.alerta-m-container {
-    width: 80%;
-    background-color: rgba(0, 0, 0, 0.557);
-}
 
-.alerta-m-image {
+.ban-main {
     width: 100vw;
     height: 100vh;
-    background-image: url("../images/playa.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
     color: white;
     font-size: 150%;
     text-align: center;
+    background-image: url("../images/banimg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.ban-icon {
+    width: 100%;
+}
+
+.alerta-m-container {
+    width: 100%;
+    background-color: rgba(255, 132, 0, 0.42);
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+
+.textCont {
+    width: 80%;
 }
 
 /*===================================================
