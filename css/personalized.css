@@ -758,6 +758,11 @@ footer {
 /* TAMAÑOS GRID COLUMNS RESPONSIVE (COLUMNAS PARA ABARCAR) */
 /* Dispositivos de hasta de 600px (mobiles y tablets) */
 @media only screen and (max-width: 601px) {
+    .nav {
+        flex-direction: column;
+        position: fixed;
+    }
+
 
     .slider {
         width: 100%;
@@ -887,6 +892,11 @@ footer {
 
 /* Dispositivos de mas de 900px (Desktops y +) */
 @media only screen and (min-width: 900px) {
+    .nav {
+    
+        position: fixed;
+    }
+
     .slider {
         width: 50%;
     }
@@ -951,7 +961,7 @@ footer {
 @media (max-width: 920px) {
     .nav {
         flex-direction: column;
-        
+        position: fixed;
     }
 
     .nav-logo {
