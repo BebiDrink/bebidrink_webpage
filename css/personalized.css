@@ -155,6 +155,7 @@ nav {
     justify-content: center;
     align-items: center;
     background-color: var(--color-txt);
+    position: fixed;
 }
 
 .nav-logo {
@@ -936,6 +937,7 @@ footer {
 @media (max-width: 920px) {
     .nav {
         flex-direction: column;
+        
     }
 
     .nav-logo {
