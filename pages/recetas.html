@@ -64,9 +64,10 @@
 
   <!---------- Header section ---------->
   <header class="container center-center header-receta">
-    <h1 class="titulo-recetas">¿Quieres un trago?<br />¡Mixealo!</h1>
+    <h1 class="titulo-recetas">¿Quieres un trago?<br />¡Mixealo con estas recetas!</h1>
     <div class="flex flexrow-wrap center container">
-      <input type="text" id="consulta" class="consulta" />
+      <label><h5>Busca la receta de tu cócktel favorito</h5></label>
+      <input type="text" id="consulta" class="consulta" placeholder="Tu cocktel aquí" value="Tequila sunrise"/>
       <button id="buscar" class="btn center">
         MIX
       </button>
@@ -88,22 +89,22 @@
         <!-- AQUI SE INSERTA LA TARJETA DE LA RECETA BUSCADA 
             JUNTO CON SU IMAGEN RESPECTIVA -->
         <div class="container">
-          <ul class="grid center">
+          <ul class="grid center card">
             <li class="s-6 m-3 l-3 flex flexcol center">
-              <i class="fa-solid fa-user-astronaut"></i>
-              <p>Se tu propio barman</p>
+              <i class="fa-solid fa-user-astronaut"> 1 </i>
+              <p>Se tu propio barman. prepara tus cóckteles favoritos</p>
             </li>
             <li class="s-6 m-3 l-3 flex flexcol center">
-              <i class="fa-solid fa-wine-bottle"></i>
-              <p>Busca tu trago</p>
+              <i class="fa-solid fa-wine-bottle"> 2 </i>
+              <p>Escribe el nombre del cócktel en el buscador de arriba</p>
             </li>
             <li class="s-6 m-3 l-3 flex flexcol center">
-              <i class="fa-solid fa-dice-d6"></i>
-              <p>Mixealo</p>
+              <i class="fa-solid fa-dice-d6"> 3 </i>
+              <p>Dale al boton "Mix" para buscar tu cócktel</p>
             </li>
             <li class="s-6 m-3 l-3 flex flexcol center">
-              <i class="fa-solid fa-bolt"></i>
-              <p>Prende la fiesta</p>
+              <i class="fa-solid fa-bolt"> 4 </i>
+              <p> ¡Y listo! Mirá la receta y Prende la fiesta</p>
             </li>
           </ul>
         </div>
