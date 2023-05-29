@@ -64,9 +64,29 @@
 
   <!---------- Header section ---------->
   <header class="container center-center header-receta">
-    <h1 class="titulo-recetas">¿Quieres un trago?<br />¡Mixealo con estas recetas!</h1>
+    <h1 class="titulo-recetas">¿Quieres un trago?<br />¡Sigue los siguientes pasos y Mixealo con estas recetas!</h1>
     <div class="flex flexrow-wrap center container">
-      <label><h5>Busca la receta de tu cócktel favorito</h5></label>
+      <div class="container">
+        <ul class="grid center card">
+          <li class="s-6 m-3 l-3 flex flexcol center">
+            <i class="fa-solid fa-user-astronaut"> 1° </i>
+            <p>Sé tu propio barman y buscá tus cócteles favoritos</p>
+          </li>
+          <li class="s-6 m-3 l-3 flex flexcol center">
+            <i class="fa-solid fa-wine-bottle"> 2° </i>
+            <p>Escribe el nombre del cóctel en el buscador, si no recuerdas el nombre completo, no te preocupes, podes buscarlo colocando una palabra</p>
+          </li>
+          <li class="s-6 m-3 l-3 flex flexcol center">
+            <i class="fa-solid fa-dice-d6"> 3° </i>
+            <p>Dale al boton "Mix" para que encontremos tu cóctel</p>
+          </li>
+          <li class="s-6 m-3 l-3 flex flexcol center">
+            <i class="fa-solid fa-bolt"> 4° </i>
+            <p> ¡Y listo! Mirá la receta, animate a prepararlo y que comience la fiesta</p>
+          </li>
+        </ul>
+      </div>
+      <label><h4>Busca la receta de tu cóctel favorito</h4></label>
       <input type="text" id="consulta" class="consulta" placeholder="Tu cocktel aquí" value="Tequila sunrise"/>
       <button id="buscar" class="btn center">
         MIX
@@ -88,26 +108,7 @@
       <article id="resultado" class="flex flexrow center">
         <!-- AQUI SE INSERTA LA TARJETA DE LA RECETA BUSCADA 
             JUNTO CON SU IMAGEN RESPECTIVA -->
-        <div class="container">
-          <ul class="grid center card">
-            <li class="s-6 m-3 l-3 flex flexcol center">
-              <i class="fa-solid fa-user-astronaut"> 1 </i>
-              <p>Se tu propio barman. prepara tus cóckteles favoritos</p>
-            </li>
-            <li class="s-6 m-3 l-3 flex flexcol center">
-              <i class="fa-solid fa-wine-bottle"> 2 </i>
-              <p>Escribe el nombre del cócktel en el buscador de arriba</p>
-            </li>
-            <li class="s-6 m-3 l-3 flex flexcol center">
-              <i class="fa-solid fa-dice-d6"> 3 </i>
-              <p>Dale al boton "Mix" para buscar tu cócktel</p>
-            </li>
-            <li class="s-6 m-3 l-3 flex flexcol center">
-              <i class="fa-solid fa-bolt"> 4 </i>
-              <p> ¡Y listo! Mirá la receta y Prende la fiesta</p>
-            </li>
-          </ul>
-        </div>
+    
       </article>
     </section>
   </main>
