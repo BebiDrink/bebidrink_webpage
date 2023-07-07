@@ -58,7 +58,7 @@ const request = async (url) => {
   agregarImg(data);
 };
 //const datos = request("http://127.0.0.1:5000/productos");
-const datos = request("http://bebidrink.pythonanywhere.com/productos");
+const datos = request("https://bebidrink.pythonanywhere.com/productos");
 
 window.addEventListener("load", (event) => {
   console.log("Pagina arriba");
