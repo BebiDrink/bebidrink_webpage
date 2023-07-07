@@ -1,8 +1,36 @@
 function agregarImg(datos) {
+  console.log("estoy en agregar img" );
   console.log(datos);
   const div = document.querySelector("#productos"); //container => #productos
-  for (let index = 0; index < datos.bebidas.length; index++) {
+  console.log (datos[1]); 
+  datos.forEach(element => {
+    console.log(element);
+    console.log("estoy en el for img" );
     const divImg = document.createElement("div");
+    divImg.className = "card l-3 m-4 s-12 "; // <== ejemplo: "divProductos card col l-3 m-4 s-6" 
+
+    div.appendChild(divImg);
+    const img = document.createElement("img");
+    img.src = element.imagen;
+    img.alt = element.nombre;
+    img.className = "img-productos"; //productos => img-productos
+    const p = document.createElement("p");
+    p.textContent = element.nombre;
+    const precio = document.createElement("p");
+    precio.textContent =  '$' + element.precio;
+    const stock = document.createElement("p");
+    stock.textContent =  'Stock: ' + element.stock;
+    
+    console.log(element.nombre);
+    console.log(element.precio);
+    divImg.appendChild(img);
+    divImg.appendChild(p);
+    divImg.appendChild(precio);
+    divImg.appendChild(stock);
+    divImg.appendChild(document.createElement("br"));
+  });
+  
+  
 
     /*EJEMPLO CLASES => "card col l-3 m-4 s-6" en divImg: 
 
@@ -18,22 +46,9 @@ function agregarImg(datos) {
            12 columas.
       =======================================> 
     */
-    divImg.className = "card l-3 m-4 s-12 "; // <== ejemplo: "divProductos card col l-3 m-4 s-6" 
+   
 
-    div.appendChild(divImg);
-    const img = document.createElement("img");
-    img.src = datos.bebidas[index].rutaImagen;
-    img.alt = datos.bebidas[index].name;
-    img.className = "img-productos"; //productos => img-productos
-    const p = document.createElement("p");
-    p.textContent = datos.bebidas[index].name;
-    
-    console.log(datos.bebidas[index].name);
-    divImg.appendChild(img);
-    divImg.appendChild(p);
-    divImg.appendChild(document.createElement("br"));
-
-  }
+  
 }
 
 const request = async (url) => {
@@ -42,8 +57,8 @@ const request = async (url) => {
   const data = await response.json();
   agregarImg(data);
 };
-
-const datos = request("./../data/productos.json");
+//const datos = request("http://127.0.0.1:5000/productos");
+const datos = request("http://bebidrink.pythonanywhere.com/productos");
 
 window.addEventListener("load", (event) => {
   console.log("Pagina arriba");

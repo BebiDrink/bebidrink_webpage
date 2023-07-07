@@ -2,15 +2,15 @@ let nameIn = document.querySelector(".alert-name");
 
 function validateForm() {
     // Obtener los valores de los campos
+  
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
     let subject = document.getElementById("subject").value;
     let message = document.getElementById("message").value;
     let validAlert = "";
+
   
-    // Validar los campos (puedes agregar tus propias validaciones aquí)
-  
-    // Comprobar si el campo de nombre está vacío
+
     if (name === '') {
       validAlert = 'Por favor, ingresa tu nombre';
       notValid(validAlert);
